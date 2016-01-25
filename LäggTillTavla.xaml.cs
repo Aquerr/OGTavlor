@@ -26,14 +26,16 @@ namespace TavelProjektPT
 
         private void LäggTill_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow StartSida = new MainWindow(); //öppnar en ny form
+            //Öppnar ett nytt fönster
+            MainWindow StartSida = new MainWindow();
             this.Close();
             StartSida.Show();
         }
 
         private void Avbryt_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow StartSida = new MainWindow(); //öppnar en ny form
+            //Öppnar ett nytt fönster
+            MainWindow StartSida = new MainWindow();
             this.Close();
             StartSida.Show();
         }
