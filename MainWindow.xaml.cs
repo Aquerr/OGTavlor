@@ -27,9 +27,16 @@ namespace TavelProjektPT
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            LäggTillTavla LäggTill = new LäggTillTavla(); //öppnar en ny form
+            //Öppnar ett nytt fönster
+
+            LäggTillTavla LäggTill = new LäggTillTavla();
             this.Close();
             LäggTill.Show();
+        }
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
