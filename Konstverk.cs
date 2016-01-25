@@ -17,6 +17,6 @@ namespace OGTavlor
         public int Bredd { get; set; }
         public int Höjd { get; set; }
         public string Kommentar { get; set; }
-
+        public string ImagePath { get; set; }
     }
 }
