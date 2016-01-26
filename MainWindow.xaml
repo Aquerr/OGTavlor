@@ -10,5 +10,9 @@
         <Button x:Name="LäggTillTavla" Content="Tryck för att lägga till tavlan" HorizontalAlignment="Left" Margin="124,541,0,0" VerticalAlignment="Top" Width="199" Click="button_Click" Height="47"/>
         <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="982,10,0,0" TextWrapping="Wrap" Text="Sök här..." VerticalAlignment="Top" Width="120" TextChanged="SearchBox_TextChanged"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="139" Margin="84,124,0,0" VerticalAlignment="Top" Width="274" Source="logo.png" />
+    <ToolBarTray HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="1272" Grid.ColumnSpan="2">
+            <ToolBar x:Name="toolBar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="22" Header="Fil" Margin="0,4,0,-4"/>
+            <ToolBar x:Name="toolBar1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="21" Width="62" Header="Help" Margin="6,5,-6,-4"/>
+        </ToolBarTray>
     </Grid>
 </Window>
