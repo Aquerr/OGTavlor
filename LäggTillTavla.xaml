@@ -7,22 +7,22 @@
         mc:Ignorable="d"
         Title="LäggTillTavla" Height="720" Width="1280">
     <Grid>
-        <TextBox x:Name="Namn" HorizontalAlignment="Left" Height="23" Margin="347,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Rum" HorizontalAlignment="Left" Height="23" Margin="347,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Material" HorizontalAlignment="Left" Height="23" Margin="347,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Datum" HorizontalAlignment="Left" Height="23" Margin="347,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Status" HorizontalAlignment="Left" Height="23" Margin="347,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="KomBesk" HorizontalAlignment="Left" Height="58" Margin="287,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
-        <Label x:Name="label" Content="Namn" HorizontalAlignment="Left" Margin="287,10,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy" Content="Rum" HorizontalAlignment="Left" Margin="287,46,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy1" Content="Material" HorizontalAlignment="Left" Margin="287,82,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy2" Content="Datum" HorizontalAlignment="Left" Margin="287,116,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy3" Content="Status" HorizontalAlignment="Left" Margin="287,151,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy4" Content="Kommentar/beskrivning" HorizontalAlignment="Left" Margin="287,185,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Avbryt" Content="Avbryt" HorizontalAlignment="Left" Margin="392,294,0,0" VerticalAlignment="Top" Width="75" Click="Avbryt_Click"/>
-        <Button x:Name="LäggTill" Content="Lägg Till" HorizontalAlignment="Left" Margin="287,294,0,0" VerticalAlignment="Top" Width="75" Click="LäggTill_Click"/>
-        <Button x:Name="ÄndraBild" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="80,279,0,0" VerticalAlignment="Top" Width="95"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="258" Margin="10,10,0,0" VerticalAlignment="Top" Width="245"/>
+        <TextBox x:Name="Namn" HorizontalAlignment="Left" Height="23" Margin="750,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Rum" HorizontalAlignment="Left" Height="23" Margin="750,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Material" HorizontalAlignment="Left" Height="23" Margin="750,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Datum" HorizontalAlignment="Left" Height="23" Margin="750,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Status" HorizontalAlignment="Left" Height="23" Margin="750,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="KomBesk" HorizontalAlignment="Left" Height="134" Margin="690,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349"/>
+        <Label x:Name="label" Content="Namn" HorizontalAlignment="Left" Margin="690,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Rum" HorizontalAlignment="Left" Margin="690,63,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="Material" HorizontalAlignment="Left" Margin="690,116,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy2" Content="Datum" HorizontalAlignment="Left" Margin="690,172,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy3" Content="Status" HorizontalAlignment="Left" Margin="690,224,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy4" Content="Kommentar/beskrivning" HorizontalAlignment="Left" Margin="690,279,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Avbryt" Content="Avbryt" HorizontalAlignment="Left" Margin="1187,659,0,0" VerticalAlignment="Top" Width="75" Click="Avbryt_Click"/>
+        <Button x:Name="LäggTill" Content="Lägg Till" HorizontalAlignment="Left" Margin="1107,659,0,0" VerticalAlignment="Top" Width="75" Click="LäggTill_Click"/>
+        <Button x:Name="ÄndraBild" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="690,659,0,0" VerticalAlignment="Top" Width="95"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="669" Margin="10,10,0,0" VerticalAlignment="Top" Width="659"/>
 
     </Grid>
 </Window>
