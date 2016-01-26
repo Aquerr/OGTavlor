@@ -15,8 +15,8 @@
         <Label x:Name="LblName" Content="Name" HorizontalAlignment="Left" Margin="289,47,0,0" VerticalAlignment="Top" Height="23"/>
         <Label x:Name="LblStatus" Content="Status:" HorizontalAlignment="Left" Margin="289,131,0,0" VerticalAlignment="Top" Height="23" RenderTransformOrigin="0.467,1.789"/>
         <TextBox x:Name="TxtbxStatus" HorizontalAlignment="Left" Height="23" Margin="341,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="BtnSparaÄndringar" Content="Spara ändringar" HorizontalAlignment="Left" Margin="289,170,0,0" VerticalAlignment="Top" Width="92"/>
-        <Button x:Name="BtnAvbryt" Content="Avbryt" HorizontalAlignment="Left" Margin="387,170,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button x:Name="BtnSparaÄndringar" Content="Spara ändringar" HorizontalAlignment="Left" Margin="289,170,0,0" VerticalAlignment="Top" Width="92" Click="BtnSparaÄndringar_Click"/>
+        <Button x:Name="BtnAvbryt" Content="Avbryt" HorizontalAlignment="Left" Margin="387,170,0,0" VerticalAlignment="Top" Width="74" Click="BtnAvbryt_Click"/>
         <Image x:Name="ImgÄndraBild" HorizontalAlignment="Left" Height="300" Margin="10,37,0,0" VerticalAlignment="Top" Width="250"/>
 
     </Grid>

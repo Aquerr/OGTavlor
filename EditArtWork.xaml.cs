@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TavelProjektPT;
 
 namespace OGTavlor
 {
@@ -22,6 +23,21 @@ namespace OGTavlor
         public EditArtWork()
         {
             InitializeComponent();
+        }
+
+        private void BtnSparaÄndringar_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Konstverkets ändringar har nu blivit sparade!");
+            MainWindow StartSida = new MainWindow();
+            this.Close();
+            StartSida.Show();
+        }
+
+        private void BtnAvbryt_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow StartSida = new MainWindow();
+            this.Close();
+            StartSida.Show();
         }
     }
 }

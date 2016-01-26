@@ -12,9 +12,10 @@
             <ColumnDefinition Width="323*"/>
             <ColumnDefinition Width="402*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="LäggTillTavla" Content="Tryck för att lägga till tavlan" HorizontalAlignment="Left" Margin="124,541,0,0" VerticalAlignment="Top" Width="199" Click="button_Click" Height="47"/>
+        <Button x:Name="LäggTillKonstverk" Content="Tryck för att lägga till konstverk" HorizontalAlignment="Left" Margin="111,472,0,0" VerticalAlignment="Top" Width="199" Click="button_Click" Height="47"/>
         <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="112,10,0,0" TextWrapping="Wrap" Text="Sök här..." VerticalAlignment="Top" Width="120" TextChanged="SearchBox_TextChanged" Grid.Column="2" RenderTransformOrigin="0.5,0.5"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="139" Margin="77,125,0,0" VerticalAlignment="Top" Width="274" Source="logo.png" />
-        <Button x:Name="TaBortTavla" Content="Tryck för att ta bort konstverk" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Margin="124,593,0,0" Height="47" Click="button_Click_1"/>
+        <Button x:Name="TaBortKonstverk" Content="Tryck för att ta bort konstverk" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Margin="111,524,0,0" Height="47" Click="button_Click_1"/>
+        <Button x:Name="RedigeraKonstverk" Content="Tryck för att redigera konstverk" HorizontalAlignment="Left" Margin="111,576,0,0" VerticalAlignment="Top" Width="199" Height="47" Click="RedigeraKonstverk_Click"/>
     </Grid>
 </Window>
