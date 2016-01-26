@@ -24,6 +24,23 @@ namespace TavelProjektPT
         public MainWindow()
         {
             InitializeComponent();
+            List<User> items = new List<User>();
+            items.Add(new User() { Name = "John Doe", Age = 42, Mail = "john@doe-family.com" }); //Temporary
+            items.Add(new User() { Name = "Jane Doe", Age = 39, Mail = "jane@doe-family.com" }); //Temp
+            items.Add(new User() { Name = "Sammy Doe", Age = 13, Mail = "sammy.doe@gmail.com" }); //Temp
+            lvDataBinding.ItemsSource = items; //lvDataBinding = namn på ListView
+        }
+
+        public class User //Temp! ersätts sedan med klassen Konstverk MEN INTE ÄN!!!
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public string Mail { get; set; }
+
+            public override string ToString()
+            {
+                return this.Name + ", " + this.Age + " years old";
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
