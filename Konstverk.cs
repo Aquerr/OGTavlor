@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace OGTavlor
 {
-    class Konstverk
+    public class Konstverk
     {
         public int Id { get; set; }
-        public string Namn { get; set; }
-        public string Datum { get; set; }
-        public string Konstnär { get; set; }
-        public string Rum { get; set; }
+        public string Name { get; set; }
+        public string Date { get; set; }
+        public string Artist { get; set; }
+        public string Room { get; set; }
         public string Material { get; set; }
-        public int Bredd { get; set; }
-        public int Höjd { get; set; }
-        public string Kommentar { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
+        public string Comment { get; set; }
         public string ImagePath { get; set; }
     }
 }
