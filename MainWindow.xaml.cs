@@ -82,5 +82,10 @@ namespace TavelProjektPT
             this.Close();
             EditArt.Show();
         }
+
+        private void SearchBox_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            SearchBox.Text = "";
+        }
     }
 }
