@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OGTavlor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,7 @@ namespace TavelProjektPT
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            //Öppnar ett nytt fönster
+            //Opens a window for adding artwork.
 
             LäggTillTavla LäggTill = new LäggTillTavla();
             this.Close();
@@ -54,6 +55,15 @@ namespace TavelProjektPT
             }
 
             
+        }
+
+        private void RedigeraKonstverk_Click(object sender, RoutedEventArgs e)
+        {
+            //Opens a window for editing artwork.
+
+            EditArtWork EditArt = new EditArtWork();
+            this.Close();
+            EditArt.Show();
         }
     }
 }
