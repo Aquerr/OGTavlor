@@ -1,1 +1,2 @@
 c:\users\admin\documents\visual studio 2015\Projects\OGTavlor\OGTavlor\bin\Debug\OGTavlor.exe.config
+C:\Users\Admin\Desktop\Git\OGTavlor\OGTavlor\bin\Debug\OGTavlor.exe.config
