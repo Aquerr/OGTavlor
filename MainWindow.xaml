@@ -17,5 +17,23 @@
         <Image x:Name="image" HorizontalAlignment="Left" Height="139" Margin="77,125,0,0" VerticalAlignment="Top" Width="274" Source="logo.png" />
         <Button x:Name="TaBortKonstverk" Content="Tryck för att ta bort konstverk" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Margin="111,524,0,0" Height="47" Click="button_Click_1"/>
         <Button x:Name="RedigeraKonstverk" Content="Tryck för att redigera konstverk" HorizontalAlignment="Left" Margin="111,576,0,0" VerticalAlignment="Top" Width="199" Height="47" Click="RedigeraKonstverk_Click"/>
+        <Label x:Name="label" Content="OGTavlor 2016" HorizontalAlignment="Left" Margin="0,657,0,0" VerticalAlignment="Top" Width="95" FontWeight="Bold"/>
+	<ListView x:Name="lvDataBinding" Grid.Column="2" HorizontalAlignment="Left" Height="359" Margin="10,38,0,0" VerticalAlignment="Top" Width="383">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="Name: "/>
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                        <TextBlock Text=", " />
+                        <TextBlock Text="Age: " />
+                        <TextBlock Text="{Binding Age}" FontWeight="Bold" />
+                        <TextBlock Text=" (" />
+                        <TextBlock Text="{Binding Mail}" TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
+                        <TextBlock Text=")" />
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </Grid>
 </Window>
