@@ -38,5 +38,22 @@ namespace TavelProjektPT
         {
 
         }
+
+        private void button_Click_1(object sender, RoutedEventArgs e) //Ta bort konstverk
+        {
+            //Opens a messagebox with a question and 3 buttons (Yes, No or Cancel)
+
+            MessageBoxResult resultatet = MessageBox.Show("Är du säker på att du vill ta bort konstverket?", "Ta bort konstverk",MessageBoxButton.YesNo);
+            if(resultatet==MessageBoxResult.Yes)    //"Yes" button
+            {
+                MessageBox.Show("Du har nu tagit bort detta konstverk", "Borttagget konstverk.");
+            }
+            if(resultatet==MessageBoxResult.No) //"No" button.
+            {
+                MessageBox.Show("Konstverket har inte tagits bort", "Konstverket ej raderat");
+            }
+
+            
+        }
     }
 }
