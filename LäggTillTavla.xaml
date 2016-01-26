@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TavelProjektPT"
         mc:Ignorable="d"
-        Title="LäggTillTavla" Height="366.113" Width="502.079">
+        Title="LäggTillTavla" Height="720" Width="1280">
     <Grid>
         <TextBox x:Name="Namn" HorizontalAlignment="Left" Height="23" Margin="347,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Rum" HorizontalAlignment="Left" Height="23" Margin="347,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
