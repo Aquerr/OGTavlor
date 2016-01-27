@@ -26,12 +26,12 @@ namespace TavelProjektPT
             InitializeComponent();
             List<User> items = new List<User>();
             items.Add(new User() { Name = "John Doe", Age = 42, Mail = "john@doe-family.com" }); //Temporary
-            items.Add(new User() { Name = "Jane Doe", Age = 39, Mail = "jane@doe-family.com" }); //Temp
-            items.Add(new User() { Name = "Sammy Doe", Age = 13, Mail = "sammy.doe@gmail.com" }); //Temp
-            lvDataBinding.ItemsSource = items; //lvDataBinding = namn på ListView
+            items.Add(new User() { Name = "Jane Doe", Age = 39, Mail = "jane@doe-family.com" }); //Temporary
+            items.Add(new User() { Name = "Sammy Doe", Age = 13, Mail = "sammy.doe@gmail.com" }); //Temporary
+            lvDataBinding.ItemsSource = items; //lvDataBinding = name for the ListView
         }
 
-        public class User //Temp! ersätts sedan med klassen Konstverk MEN INTE ÄN!!!
+        public class User //Temporary! to be replaced with the class artwork but not yet!
         {
             public string Name { get; set; }
             public int Age { get; set; }
@@ -61,12 +61,12 @@ namespace TavelProjektPT
         {
             //Opens a messagebox with a question and 3 buttons (Yes, No or Cancel)
 
-            MessageBoxResult resultatet = MessageBox.Show("Är du säker på att du vill ta bort konstverket?", "Ta bort konstverk",MessageBoxButton.YesNo);
-            if(resultatet==MessageBoxResult.Yes)    //"Yes" button
+            MessageBoxResult result = MessageBox.Show("Är du säker på att du vill ta bort konstverket?", "Ta bort konstverk",MessageBoxButton.YesNo);
+            if(result==MessageBoxResult.Yes)    //"Yes" button
             {
                 MessageBox.Show("Du har nu tagit bort detta konstverk", "Borttagget konstverk.");
             }
-            if(resultatet==MessageBoxResult.No) //"No" button.
+            if(result==MessageBoxResult.No) //"No" button.
             {
                 MessageBox.Show("Konstverket har inte tagits bort", "Konstverket ej raderat");
             }
