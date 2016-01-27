@@ -30,8 +30,8 @@
         <Label x:Name="LblDate" Content="Datum" HorizontalAlignment="Left" Margin="690,172,0,0" VerticalAlignment="Top"/>
         <Label x:Name="LblStatus" Content="Status" HorizontalAlignment="Left" Margin="690,224,0,0" VerticalAlignment="Top"/>
         <Label x:Name="LblCommentDescription" Content="Kommentar/beskrivning" HorizontalAlignment="Left" Margin="690,279,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Cancel" Content="Avbryt" HorizontalAlignment="Left" Margin="1187,659,0,0" VerticalAlignment="Top" Width="75" Click="Avbryt_Click"/>
-        <Button x:Name="Add" Content="Lägg Till" HorizontalAlignment="Left" Margin="1107,659,0,0" VerticalAlignment="Top" Width="75" Click="LäggTill_Click"/>
+        <Button x:Name="Cancel" Content="Avbryt" HorizontalAlignment="Left" Margin="1187,659,0,0" VerticalAlignment="Top" Width="75" Click="BtnAvbryt_Click"/>
+        <Button x:Name="Add" Content="Lägg Till" HorizontalAlignment="Left" Margin="1107,659,0,0" VerticalAlignment="Top" Width="75" Click="BtnSparaÄndringar_Click"/>
         <Button x:Name="ChangePicture" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="690,659,0,0" VerticalAlignment="Top" Width="95"/>
         <Image x:Name="Image" HorizontalAlignment="Left" Height="669" Margin="10,10,0,0" VerticalAlignment="Top" Width="659"/>
 
