@@ -35,19 +35,40 @@
         <Button x:Name="RedigeraKonstverk" Content="Tryck för att redigera konstverk" HorizontalAlignment="Left" Margin="143,584,0,0" VerticalAlignment="Top" Width="199" Height="47" Click="RedigeraKonstverk_Click"/>
         <Label x:Name="label" Content="OGTavlor 2016" HorizontalAlignment="Left" Margin="0,657,0,0" VerticalAlignment="Top" Width="95" FontWeight="Bold" Height="26"/>
         <ListView x:Name="lvDataBinding" Grid.Column="1" HorizontalAlignment="Left" Height="643" Margin="10,38,0,0" VerticalAlignment="Top" Width="759" Background="White">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
-                    <GridViewColumn Header="Age" Width="50" DisplayMemberBinding="{Binding Age}" />
-                    <GridViewColumn Header="Mail" Width="150" >
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Mail}" TextDecorations="Underline" Foreground="Blue" Cursor="Hand"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                   </GridViewColumn>
-                </GridView>
-            </ListView.View>
+
+            <DataGrid Name="dgUsers" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Birthday" Binding="{Binding Birthday}" />
+                </DataGrid.Columns>
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                        <DockPanel Background="GhostWhite">
+                            <Image DockPanel.Dock="Left" Source="{Binding ImageUrl}" Height="64" Margin="10" />
+                            <Grid Margin="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="ID: " FontWeight="Bold" />
+                                <TextBlock Text="{Binding Id}" Grid.Column="1" />
+                                <TextBlock Text="Name: " FontWeight="Bold" Grid.Row="1" />
+                                <TextBlock Text="{Binding Name}" Grid.Column="1" Grid.Row="1" />
+                                <TextBlock Text="Birthday: " FontWeight="Bold" Grid.Row="2" />
+                                <TextBlock Text="{Binding Birthday, StringFormat=d}" Grid.Column="1" Grid.Row="2" />
+
+                            </Grid>
+                        </DockPanel>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
+            </DataGrid>
+
         </ListView>
 
     </Grid>

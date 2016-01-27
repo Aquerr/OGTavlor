@@ -24,24 +24,16 @@ namespace TavelProjektPT
         public MainWindow()
         {
             InitializeComponent();
-            List<User> items = new List<User>();
-            items.Add(new User() { Name = "John Doe", Age = 42, Mail = "john@doe-family.com" }); //Temporary
-            items.Add(new User() { Name = "Jane Doe", Age = 39, Mail = "jane@doe-family.com" }); //Temp
-            items.Add(new User() { Name = "Sammy Doe", Age = 13, Mail = "sammy.doe@gmail.com" }); //Temp
-            lvDataBinding.ItemsSource = items; //lvDataBinding = namn på ListView
+            List<User> users = new List<User>();
+            users.Add(new User() { Id = 1, Name = "John Doe", Date = new DateTime(1971, 7, 23).ToString(), ImageUrl= "http://www.wpf-tutorial.com/images/misc/john_doe.jpg" }); //Temporary
+            users.Add(new User() { Id = 2, Name = "Jane Doe", Date = new DateTime(1974, 1, 17).ToString() }); //Temp
+            users.Add(new User() { Id = 3, Name = "Sammy Doe", Date = new DateTime (1991, 9, 2).ToString() }); //Temp
+             //lvDataBinding = namn på ListView
+
+            dgUsers.ItemsSource = users;
         }
 
-        public class User //Temp! ersätts sedan med klassen Konstverk MEN INTE ÄN!!!
-        {
-            public string Name { get; set; }
-            public int Age { get; set; }
-            public string Mail { get; set; }
-
-            public override string ToString()
-            {
-                return this.Name + ", " + this.Age + " years old";
-            }
-        }
+       
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
@@ -88,4 +80,19 @@ namespace TavelProjektPT
             SearchBox.Text = "";
         }
     }
+    
+
+        public class User //Temp! ersätts sedan med klassen Konstverk MEN INTE ÄN!!!
+        {
+            public string Name { get; set; }
+            public int Id { get; set; }
+            //public string Mail { get; set; }
+            public string Date { get; set; }
+            public string ImageUrl { get; set; }
+
+            //public override string ToString()
+            //{
+            //    return this.Name + ", " + this.Age + " years old";
+            //}
+        }
 }
