@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OGTavlor"
         mc:Ignorable="d"
-        Title="EditArtWork" Height="417" Width="560" ResizeMode="NoResize">
+        Title="EditArtWork" Height="720" Width="1280" ResizeMode="NoResize">
     <Grid Margin="0,0,2,7">
         <TextBox x:Name="TxtBxName" HorizontalAlignment="Left" Height="23" Margin="341,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TxtbxRoom" HorizontalAlignment="Left" Height="23" Margin="341,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
