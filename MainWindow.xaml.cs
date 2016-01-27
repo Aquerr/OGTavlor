@@ -46,6 +46,7 @@ namespace TavelProjektPT
         private void button_Click(object sender, RoutedEventArgs e)
         {
             //Opens a window for adding artwork.
+            //KVAR ATT ÖVERSÄTTA!
 
             LäggTillTavla LäggTill = new LäggTillTavla();
             this.Close();

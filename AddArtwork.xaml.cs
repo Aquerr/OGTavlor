@@ -26,18 +26,21 @@ namespace TavelProjektPT
 
         private void LäggTill_Click(object sender, RoutedEventArgs e)
         {
-            //Öppnar ett nytt fönster
-            MainWindow StartSida = new MainWindow();
-            this.Close();
-            StartSida.Show();
+            OpenMainWindow();
         }
 
         private void Avbryt_Click(object sender, RoutedEventArgs e)
         {
-            //Öppnar ett nytt fönster
-            MainWindow StartSida = new MainWindow();
-            this.Close();
-            StartSida.Show();
+            OpenMainWindow();
         }
+
+        public void OpenMainWindow()
+        {
+            //Opens MainWindow and closes the AddArtwork page.
+            MainWindow HomePage = new MainWindow();
+            this.Close();
+            HomePage.Show();
+        }
+        
     }
 }
