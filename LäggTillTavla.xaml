@@ -6,6 +6,17 @@
         xmlns:local="clr-namespace:TavelProjektPT"
         mc:Ignorable="d"
         Title="LäggTillTavla" Height="720" Width="1280" ResizeMode="NoResize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFD4A31E"/>
+            <GradientStop Color="#FF382B08"/>
+            <GradientStop Color="White"/>
+            <GradientStop Color="#FFE98300" Offset="1"/>
+            <GradientStop Color="#FFE28D09" Offset="1"/>
+            <GradientStop Color="#FFDF900C" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <TextBox x:Name="Namn" HorizontalAlignment="Left" Height="23" Margin="750,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Rum" HorizontalAlignment="Left" Height="23" Margin="750,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
