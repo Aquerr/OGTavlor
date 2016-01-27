@@ -47,9 +47,9 @@ namespace TavelProjektPT
         {
             //Opens a window for adding artwork.
 
-            LäggTillTavla LäggTill = new LäggTillTavla();
+            AddArtwork AddArt = new AddArtwork();
             this.Close();
-            LäggTill.Show();
+            AddArt.Show();
         }
 
         private void SearchBox_TextChanged(object sender, EventArgs e)

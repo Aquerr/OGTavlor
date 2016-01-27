@@ -17,9 +17,9 @@ namespace TavelProjektPT
     /// <summary>
     /// Interaction logic for LäggTillTavla.xaml
     /// </summary>
-    public partial class LäggTillTavla : Window
+    public partial class AddArtwork : Window
     {
-        public LäggTillTavla()
+        public AddArtwork()
         {
             InitializeComponent();
         }
