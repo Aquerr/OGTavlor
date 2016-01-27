@@ -6,18 +6,34 @@
         xmlns:local="clr-namespace:OGTavlor"
         mc:Ignorable="d"
         Title="EditArtWork" Height="720" Width="1280" ResizeMode="NoResize">
-    <Grid Margin="0,0,2,7">
-        <TextBox x:Name="TxtBxName" HorizontalAlignment="Left" Height="23" Margin="341,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TxtbxRoom" HorizontalAlignment="Left" Height="23" Margin="341,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TxtbxMaterial" HorizontalAlignment="Left" Height="23" Margin="341,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="LblMaterial" Content="Material: " HorizontalAlignment="Left" Margin="289,103,0,0" VerticalAlignment="Top" Height="23"/>
-        <Label x:Name="LblRoom" Content="Room:" HorizontalAlignment="Left" Margin="289,75,0,0" VerticalAlignment="Top" Height="23"/>
-        <Label x:Name="LblName" Content="Name" HorizontalAlignment="Left" Margin="289,47,0,0" VerticalAlignment="Top" Height="23"/>
-        <Label x:Name="LblStatus" Content="Status:" HorizontalAlignment="Left" Margin="289,131,0,0" VerticalAlignment="Top" Height="23" RenderTransformOrigin="0.467,1.789"/>
-        <TextBox x:Name="TxtbxStatus" HorizontalAlignment="Left" Height="23" Margin="341,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="BtnSparaÄndringar" Content="Spara ändringar" HorizontalAlignment="Left" Margin="289,170,0,0" VerticalAlignment="Top" Width="92" Click="BtnSparaÄndringar_Click"/>
-        <Button x:Name="BtnAvbryt" Content="Avbryt" HorizontalAlignment="Left" Margin="387,170,0,0" VerticalAlignment="Top" Width="74" Click="BtnAvbryt_Click"/>
-        <Image x:Name="ImgÄndraBild" HorizontalAlignment="Left" Height="300" Margin="10,37,0,0" VerticalAlignment="Top" Width="250"/>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFD4A31E"/>
+            <GradientStop Color="#FF382B08"/>
+            <GradientStop Color="White"/>
+            <GradientStop Color="#FFE98300" Offset="1"/>
+            <GradientStop Color="#FFE28D09" Offset="1"/>
+            <GradientStop Color="#FFDF900C" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <TextBox x:Name="TxtBxName" HorizontalAlignment="Left" Height="23" Margin="750,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtBxRoom" HorizontalAlignment="Left" Height="23" Margin="750,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtBxMaterial" HorizontalAlignment="Left" Height="23" Margin="750,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtBxDate" HorizontalAlignment="Left" Height="23" Margin="750,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtBxStatus" HorizontalAlignment="Left" Height="23" Margin="750,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtBxCommentDescription" HorizontalAlignment="Left" Height="134" Margin="690,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349"/>
+        <Label x:Name="LblName" Content="Namn" HorizontalAlignment="Left" Margin="690,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblRoom" Content="Rum" HorizontalAlignment="Left" Margin="690,63,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblMaterial" Content="Material" HorizontalAlignment="Left" Margin="690,116,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblDate" Content="Datum" HorizontalAlignment="Left" Margin="690,172,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblStatus" Content="Status" HorizontalAlignment="Left" Margin="690,224,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblCommentDescription" Content="Kommentar/beskrivning" HorizontalAlignment="Left" Margin="690,279,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Cancel" Content="Avbryt" HorizontalAlignment="Left" Margin="1187,659,0,0" VerticalAlignment="Top" Width="75" Click="Avbryt_Click"/>
+        <Button x:Name="Add" Content="Lägg Till" HorizontalAlignment="Left" Margin="1107,659,0,0" VerticalAlignment="Top" Width="75" Click="LäggTill_Click"/>
+        <Button x:Name="ChangePicture" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="690,659,0,0" VerticalAlignment="Top" Width="95"/>
+        <Image x:Name="Image" HorizontalAlignment="Left" Height="669" Margin="10,10,0,0" VerticalAlignment="Top" Width="659"/>
 
     </Grid>
 </Window>
