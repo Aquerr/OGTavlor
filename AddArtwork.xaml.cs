@@ -17,27 +17,30 @@ namespace TavelProjektPT
     /// <summary>
     /// Interaction logic for LäggTillTavla.xaml
     /// </summary>
-    public partial class LäggTillTavla : Window
+    public partial class AddArtwork : Window
     {
-        public LäggTillTavla()
+        public AddArtwork()
         {
             InitializeComponent();
         }
 
         private void LäggTill_Click(object sender, RoutedEventArgs e)
         {
-            //Öppnar ett nytt fönster
-            MainWindow StartSida = new MainWindow();
-            this.Close();
-            StartSida.Show();
+            OpenMainWindow();
         }
 
         private void Avbryt_Click(object sender, RoutedEventArgs e)
         {
-            //Öppnar ett nytt fönster
-            MainWindow StartSida = new MainWindow();
-            this.Close();
-            StartSida.Show();
+            OpenMainWindow();
         }
+
+        public void OpenMainWindow()
+        {
+            //Opens MainWindow and closes the AddArtwork page.
+            MainWindow HomePage = new MainWindow();
+            this.Close();
+            HomePage.Show();
+        }
+        
     }
 }
