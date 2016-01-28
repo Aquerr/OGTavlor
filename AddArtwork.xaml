@@ -18,21 +18,21 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <TextBox x:Name="TxtBxName" HorizontalAlignment="Left" Height="41" Margin="777,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <TextBox x:Name="TxtBxRoom" HorizontalAlignment="Left" Height="41" Margin="777,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <TextBox x:Name="TxtBxMaterial" HorizontalAlignment="Left" Height="41" Margin="777,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <TextBox x:Name="TxtBxDate" HorizontalAlignment="Left" Height="41" Margin="777,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <TextBox x:Name="TxtBxStatus" HorizontalAlignment="Left" Height="41" Margin="777,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <TextBox x:Name="TxtBxCommentDescription" HorizontalAlignment="Left" Height="216" Margin="690,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="572"/>
-        <Label x:Name="LblName" Content="Namn" HorizontalAlignment="Left" Margin="690,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,3.128" Height="41" Width="65" FontSize="20"/>
-        <Label x:Name="lblRoom" Content="Rum" HorizontalAlignment="Left" Margin="690,121,0,0" VerticalAlignment="Top" Width="57" FontSize="20" Height="41"/>
-        <Label x:Name="LblMaterial" Content="Material" HorizontalAlignment="Left" Margin="690,173,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="LblDate" Content="Datum" HorizontalAlignment="Left" Margin="690,234,0,0" VerticalAlignment="Top" Width="65" FontSize="19"/>
-        <Label x:Name="LblStatus" Content="Status" HorizontalAlignment="Left" Margin="690,286,0,0" VerticalAlignment="Top" Height="41" Width="65" FontSize="20"/>
+        <TextBox x:Name="TxtBxName" HorizontalAlignment="Left" Height="41" Margin="777,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
+        <TextBox x:Name="TxtBxRoom" HorizontalAlignment="Left" Height="41" Margin="777,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
+        <TextBox x:Name="TxtBxMaterial" HorizontalAlignment="Left" Height="41" Margin="777,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
+        <TextBox x:Name="TxtBxDate" HorizontalAlignment="Left" Height="41" Margin="777,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
+        <TextBox x:Name="TxtBxStatus" HorizontalAlignment="Left" Height="41" Margin="777,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
+        <TextBox x:Name="TxtBxCommentDescription" HorizontalAlignment="Left" Height="199" Margin="690,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="558" FontSize="24"/>
+        <Label x:Name="LblName" Content="Namn" HorizontalAlignment="Left" Margin="690,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,3.128" Height="41" Width="65" FontSize="20"/>
+        <Label x:Name="lblRoom" Content="Rum" HorizontalAlignment="Left" Margin="690,128,0,0" VerticalAlignment="Top" Width="57" FontSize="20" Height="41"/>
+        <Label x:Name="LblMaterial" Content="Material" HorizontalAlignment="Left" Margin="690,187,0,0" VerticalAlignment="Top" FontSize="20" Height="41"/>
+        <Label x:Name="LblDate" Content="Datum" HorizontalAlignment="Left" Margin="690,243,0,0" VerticalAlignment="Top" Width="65" FontSize="19" Height="41"/>
+        <Label x:Name="LblStatus" Content="Status" HorizontalAlignment="Left" Margin="690,299,0,0" VerticalAlignment="Top" Height="41" Width="65" FontSize="20"/>
         <Label x:Name="LblCommentDescription" Content="Kommentar/beskrivning" HorizontalAlignment="Left" Margin="690,374,0,0" VerticalAlignment="Top" Height="42" Width="221" FontSize="20"/>
-        <Button x:Name="Cancel" Content="Avbryt" HorizontalAlignment="Left" Margin="1187,659,0,0" VerticalAlignment="Top" Width="75" Click="Avbryt_Click"/>
-        <Button x:Name="Add" Content="Lägg Till" HorizontalAlignment="Left" Margin="1107,659,0,0" VerticalAlignment="Top" Width="75" Click="LäggTill_Click"/>
-        <Button x:Name="ChangePicture" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="690,659,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button x:Name="Cancel" Content="Avbryt" HorizontalAlignment="Left" Margin="1158,635,0,0" VerticalAlignment="Top" Width="90" Click="Avbryt_Click" Height="35" Background="Transparent" BorderBrush="Black"/>
+        <Button x:Name="Add" Content="Lägg Till" HorizontalAlignment="Left" Margin="1049,635,0,0" VerticalAlignment="Top" Width="90" Click="LäggTill_Click" Height="33" Background="Transparent" BorderBrush="Black"/>
+        <Button x:Name="ChangePicture" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="690,635,0,0" VerticalAlignment="Top" Width="95" Height="33" Background="Transparent" BorderBrush="Black"/>
         <Image x:Name="Image" HorizontalAlignment="Left" Height="669" Margin="10,10,0,0" VerticalAlignment="Top" Width="659"/>
 
     </Grid>
