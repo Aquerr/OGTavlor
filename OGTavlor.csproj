@@ -54,7 +54,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="LäggTillTavla.xaml">
+    <Page Include="AddArtwork.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EditArtWork.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -62,14 +66,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddArtwork.xaml.cs">
+      <DependentUpon>AddArtwork.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Konstverk.cs" />
-    <Compile Include="LäggTillTavla.xaml.cs">
-      <DependentUpon>LäggTillTavla.xaml</DependentUpon>
+    <Compile Include="EditArtWork.xaml.cs">
+      <DependentUpon>EditArtWork.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Konstverk.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
