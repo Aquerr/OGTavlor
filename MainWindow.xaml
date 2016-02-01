@@ -38,14 +38,19 @@
         <Button x:Name="TaBortKonstverk" Content="Tryck för att ta bort konstverk" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Margin="143,403,0,0" Height="47" Click="button_Click_1" Grid.Row="1" FontFamily="Arial" Background="{x:Null}" Cursor="Hand"/>
         <Button x:Name="RedigeraKonstverk" Content="Tryck för att redigera konstverk" HorizontalAlignment="Left" Margin="143,455,0,0" VerticalAlignment="Top" Width="199" Height="47" Click="RedigeraKonstverk_Click" Grid.Row="1" FontFamily="Arial" Background="{x:Null}" Cursor="Hand"/>
         <Label x:Name="label" Content="OGTavlor 2016" HorizontalAlignment="Left" Margin="0,528,0,0" VerticalAlignment="Top" Width="95" FontWeight="Bold" Height="26" Grid.Row="1"/>
-        <ListView x:Name="lvDataBinding" Grid.Column="1" HorizontalAlignment="Left" Height="643" Margin="10,38,0,0" VerticalAlignment="Top" Width="759" Background="White" Grid.RowSpan="2">
+        <ListView x:Name="ArtworkListView" Grid.Column="1" HorizontalAlignment="Left" Height="643" Margin="10,38,0,0" VerticalAlignment="Top" Width="759" Background="White" Grid.RowSpan="2">
             <ListViewItem Background="White" Foreground="Black" Padding="+5"  
 
              FontFamily="Arial" FontSize="12" FontWeight="DemiBold">
 
                 <StackPanel Orientation="Horizontal">
-
-                    <Image Source="bild1mini.jpg" Height="100"></Image>
+                    <Button Click="PictureClick">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="bild1mini.jpg" Height="100" Cursor="Hand"></Image>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
 
                     <TextBlock><Label>Name:</Label><LineBreak></LineBreak>
                     <Label>Date:</Label><LineBreak></LineBreak>
