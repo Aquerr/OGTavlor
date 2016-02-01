@@ -32,11 +32,11 @@
             <ColumnDefinition Width="495*"/>
             <ColumnDefinition Width="779*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="LäggTillKonstverk" Content="Tryck för att lägga till konstverk" HorizontalAlignment="Left" Margin="143,351,0,0" VerticalAlignment="Top" Width="199" Click="button_Click" Height="47" Grid.Row="1"/>
+        <Button x:Name="LäggTillKonstverk" Content="Tryck för att lägga till konstverk" HorizontalAlignment="Left" Margin="143,351,0,0" VerticalAlignment="Top" Width="199" Click="button_Click" Height="47" Grid.Row="1" Cursor="Hand" Background="{x:Null}" FontFamily="Arial"/>
         <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="329,10,0,0" TextWrapping="Wrap" Text="Sök här..." VerticalAlignment="Top" Width="120" TextChanged="SearchBox_TextChanged" Grid.Column="1" RenderTransformOrigin="0.5,0.5" GotKeyboardFocus="SearchBox_GotKeyboardFocus"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="168" Margin="87,84,0,0" VerticalAlignment="Top" Width="326" Source="logo.png" Grid.RowSpan="2" />
-        <Button x:Name="TaBortKonstverk" Content="Tryck för att ta bort konstverk" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Margin="143,403,0,0" Height="47" Click="button_Click_1" Grid.Row="1"/>
-        <Button x:Name="RedigeraKonstverk" Content="Tryck för att redigera konstverk" HorizontalAlignment="Left" Margin="143,455,0,0" VerticalAlignment="Top" Width="199" Height="47" Click="RedigeraKonstverk_Click" Grid.Row="1"/>
+        <Button x:Name="TaBortKonstverk" Content="Tryck för att ta bort konstverk" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Margin="143,403,0,0" Height="47" Click="button_Click_1" Grid.Row="1" FontFamily="Arial" Background="{x:Null}" Cursor="Hand"/>
+        <Button x:Name="RedigeraKonstverk" Content="Tryck för att redigera konstverk" HorizontalAlignment="Left" Margin="143,455,0,0" VerticalAlignment="Top" Width="199" Height="47" Click="RedigeraKonstverk_Click" Grid.Row="1" FontFamily="Arial" Background="{x:Null}" Cursor="Hand"/>
         <Label x:Name="label" Content="OGTavlor 2016" HorizontalAlignment="Left" Margin="0,528,0,0" VerticalAlignment="Top" Width="95" FontWeight="Bold" Height="26" Grid.Row="1"/>
         <ListView x:Name="lvDataBinding" Grid.Column="1" HorizontalAlignment="Left" Height="643" Margin="10,38,0,0" VerticalAlignment="Top" Width="759" Background="White" Grid.RowSpan="2">
             <ListViewItem Background="White" Foreground="Black" Padding="+5"  
@@ -61,17 +61,13 @@
 
              FontFamily="Georgia" FontSize="14" FontWeight="Bold">
 
-                <CheckBox Name="TeaCheckBox">
+                <StackPanel Orientation="Horizontal">
 
-                    <StackPanel Orientation="Horizontal">
+                    <Image Height="30"></Image>
 
-                        <Image Height="30"></Image>
+                    <TextBlock Text="Tea"></TextBlock>
 
-                        <TextBlock Text="Tea"></TextBlock>
-
-                    </StackPanel>
-
-                </CheckBox>
+                </StackPanel>
 
             </ListViewItem>
 
@@ -79,17 +75,13 @@
 
              FontFamily="Verdana" FontSize="12" FontWeight="Bold">
 
-                <CheckBox Name="OrangeJuiceCheckBox">
+                <StackPanel Orientation="Horizontal">
 
-                    <StackPanel Orientation="Horizontal">
+                    <Image Height="40"></Image>
 
-                        <Image Height="40"></Image>
+                    <TextBlock Text="OrangeJuice"></TextBlock>
 
-                        <TextBlock Text="OrangeJuice"></TextBlock>
-
-                    </StackPanel>
-
-                </CheckBox>
+                </StackPanel>
 
             </ListViewItem>
 
@@ -97,17 +89,13 @@
 
              FontFamily="Georgia" FontSize="14" FontWeight="Bold">
 
-                <CheckBox Name="MilkCheckBox">
+                <StackPanel Orientation="Horizontal">
 
-                    <StackPanel Orientation="Horizontal">
+                    <Image Height="30"></Image>
 
-                        <Image Height="30"></Image>
+                    <TextBlock Text="Milk"></TextBlock>
 
-                        <TextBlock Text="Milk"></TextBlock>
-
-                    </StackPanel>
-
-                </CheckBox>
+                </StackPanel>
 
             </ListViewItem>
 
@@ -115,17 +103,13 @@
 
              FontFamily="Verdana" FontSize="12" FontWeight="Bold">
 
-                <CheckBox Name="IcedTeaCheckBox">
+                <StackPanel Orientation="Horizontal">
 
-                    <StackPanel Orientation="Horizontal">
+                    <Image Height="30"></Image>
 
-                        <Image Height="30"></Image>
+                    <TextBlock Text="Iced Tea"></TextBlock>
 
-                        <TextBlock Text="Iced Tea"></TextBlock>
-
-                    </StackPanel>
-
-                </CheckBox>
+                </StackPanel>
 
             </ListViewItem>
 
@@ -133,20 +117,15 @@
 
              FontFamily="Georgia" FontSize="14" FontWeight="Bold">
 
-                <CheckBox Name="MangoShakeCheckBox">
+                <StackPanel Orientation="Horizontal">
 
-                    <StackPanel Orientation="Horizontal">
+                    <Image Height="30"></Image>
 
-                        <Image Height="30"></Image>
+                    <TextBlock Text="Mango Shake"></TextBlock>
 
-                        <TextBlock Text="Mango Shake"></TextBlock>
-
-                    </StackPanel>
-
-                </CheckBox>
+                </StackPanel>
 
             </ListViewItem>
-
 
         </ListView>
 
