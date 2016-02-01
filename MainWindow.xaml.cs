@@ -25,7 +25,7 @@ namespace TavelProjektPT
         {
             InitializeComponent();
             FillList();
-        }      
+        }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
@@ -46,17 +46,17 @@ namespace TavelProjektPT
         {
             //Opens a messagebox with a question and 3 buttons (Yes, No or Cancel)
 
-            MessageBoxResult result = MessageBox.Show("Är du säker på att du vill ta bort konstverket?", "Ta bort konstverk",MessageBoxButton.YesNo);
-            if(result==MessageBoxResult.Yes)    //"Yes" button
+            MessageBoxResult result = MessageBox.Show("Är du säker på att du vill ta bort konstverket?", "Ta bort konstverk", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)    //"Yes" button
             {
                 MessageBox.Show("Du har nu tagit bort detta konstverk", "Borttagget konstverk.");
             }
-            if(result==MessageBoxResult.No) //"No" button.
+            if (result == MessageBoxResult.No) //"No" button.
             {
                 MessageBox.Show("Konstverket har inte tagits bort", "Konstverket ej raderat");
             }
 
-            
+
         }
 
         private void RedigeraKonstverk_Click(object sender, RoutedEventArgs e)
@@ -72,7 +72,7 @@ namespace TavelProjektPT
         {
             SearchBox.Text = "";
         }
-    
+
 
         public class User //Temp! ersätts sedan med klassen Konstverk MEN INTE ÄN!!!
         {
@@ -101,20 +101,23 @@ namespace TavelProjektPT
 
             foreach (var item in users)
             {
-             //   ArtworkListView.ItemsPanel.Template
+                ArtworkListView.Items.Add(item.Name);
+                //   ArtworkListView.ItemsPanel.Template
             }
         }
 
         private void PictureClick(object sender, RoutedEventArgs e)
         {
             // Opens a new window with big picture. Window is maximized from the start.
-
             Window picture1 = new Window();
             picture1.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             picture1.SourceInitialized += (s, a) => picture1.WindowState = WindowState.Maximized;
             picture1.Title = "Bildspel";
-           //picture1.Height = 1080;
-           //picture1.Width = 1920;
+            //picture1.Height = 1080;
+            //picture1.Width = 1920;
+            Image BigPicture = new Image();
+            var uriSource = new Uri(@"C:\Users\neoba\Desktop\GitProjekt\OGTavlor\bild1.JPG", UriKind.Relative);
+            BigPicture.Source = new BitmapImage(uriSource);
             picture1.Show();
         }
     }
