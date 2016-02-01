@@ -107,10 +107,14 @@ namespace TavelProjektPT
 
         private void PictureClick(object sender, RoutedEventArgs e)
         {
+            // Opens a new window with big picture. Window is maximized from the start.
+
             Window picture1 = new Window();
+            picture1.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            picture1.SourceInitialized += (s, a) => picture1.WindowState = WindowState.Maximized;
             picture1.Title = "Bildspel";
-            picture1.Height = 720;
-            picture1.Width = 1280;
+           //picture1.Height = 1080;
+           //picture1.Width = 1920;
             picture1.Show();
         }
     }
