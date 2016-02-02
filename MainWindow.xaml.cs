@@ -109,6 +109,8 @@ namespace TavelProjektPT
 
             foreach (var item in Konstverk.Artwork)
             {
+                ListViewItem Listitem = new ListViewItem();
+                Listitem.BorderBrush = Brushes.Black;
                 WrapPanel pnl = new WrapPanel();
 
                 Image img = new Image();
@@ -128,9 +130,11 @@ namespace TavelProjektPT
                 txt.Text = item.Room;
                 pnl.Children.Add(txt);
 
+                Listitem.Content = pnl;
+
                // btn.Content = pnl;
 
-                ArtworkListView.Items.Add(pnl);
+                ArtworkListView.Items.Add(Listitem);
                 //   ArtworkListView.ItemsPanel.Template
             }
         }

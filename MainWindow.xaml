@@ -41,7 +41,7 @@
         <ListView x:Name="ArtworkListView" Grid.Column="1" HorizontalAlignment="Left" Height="643" Margin="10,38,0,0" VerticalAlignment="Top" Width="759" Background="White" Grid.RowSpan="2">
             <ListViewItem Background="White" Foreground="Black" Padding="+5"  
 
-             FontFamily="Arial" FontSize="12" FontWeight="DemiBold">
+             FontFamily="Arial" FontSize="12" FontWeight="DemiBold" BorderBrush="Black">
 
                 <WrapPanel Orientation="Horizontal" Width="212">
                     <Button Click="PictureClick">
