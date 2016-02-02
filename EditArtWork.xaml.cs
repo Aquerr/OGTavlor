@@ -25,7 +25,7 @@ namespace OGTavlor
             InitializeComponent();
         }
 
-        private void BtnSparaÄndringar_Click(object sender, RoutedEventArgs e)
+        private void BtnSaveChanges_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Konstverkets ändringar har nu blivit sparade!");
             MainWindow StartSida = new MainWindow();
@@ -33,7 +33,7 @@ namespace OGTavlor
             StartSida.Show();
         }
 
-        private void BtnAvbryt_Click(object sender, RoutedEventArgs e)
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
             MainWindow StartSida = new MainWindow();
             this.Close();
