@@ -90,18 +90,47 @@ namespace TavelProjektPT
 
         public void FillList()
         {
-            List<User> users = new List<User>();
-            users.Add(new User() { Id = 1, Name = "John Doe", Date = new DateTime(1971, 7, 23).ToString(), ImageUrl = "http://www.wpf-tutorial.com/images/misc/john_doe.jpg" }); //Temporary
-            users.Add(new User() { Id = 2, Name = "Jane Doe", Date = new DateTime(1974, 1, 17).ToString() }); //Temp
-            users.Add(new User() { Id = 3, Name = "Sammy Doe", Date = new DateTime(1991, 9, 2).ToString() }); //Temp
+           //List<User> users = new List<User>();
+           //users.Add(new User() { Id = 1, Name = "John Doe", Date = new DateTime(1971, 7, 23).ToString(), ImageUrl = "http://www.wpf-tutorial.com/images/misc/john_doe.jpg" }); //Temporary
+           //users.Add(new User() { Id = 2, Name = "Jane Doe", Date = new DateTime(1974, 1, 17).ToString() }); //Temp
+           //users.Add(new User() { Id = 3, Name = "Sammy Doe", Date = new DateTime(1991, 9, 2).ToString() }); //Temp
                                                                                                               //lvDataBinding = namn på ListView
-
-
             //    lvDataBinding.ItemsSource = users;
 
-            foreach (var item in users)
+            //         < Button FontWeight = "Bold" >
+            //  < WrapPanel >
+            //      < TextBlock Foreground = "Blue" > Multi </ TextBlock >
+            //       < TextBlock Foreground = "Red" > Color </ TextBlock >
+            //        < TextBlock > Button </ TextBlock >
+            //    </ WrapPanel >
+            //</ Button >
+
+
+
+            foreach (var item in Konstverk.Artwork)
             {
-                ArtworkListView.Items.Add(item.Name);
+                WrapPanel pnl = new WrapPanel();
+
+                Image img = new Image();
+                var uriSource = new Uri(item.ImagePath, UriKind.Relative);
+                img.Source = new BitmapImage(uriSource);
+                pnl.Children.Add(img);
+
+                TextBlock txt = new TextBlock();
+                txt.Text = item.Name + " ";
+                pnl.Children.Add(txt);
+
+                txt = new TextBlock();
+                txt.Text = item.Artist + " ";
+                pnl.Children.Add(txt);
+
+                txt = new TextBlock();
+                txt.Text = item.Room;
+                pnl.Children.Add(txt);
+
+               // btn.Content = pnl;
+
+                ArtworkListView.Items.Add(pnl);
                 //   ArtworkListView.ItemsPanel.Template
             }
         }
@@ -116,7 +145,7 @@ namespace TavelProjektPT
             //picture1.Height = 1080;
             //picture1.Width = 1920;
             Image BigPicture = new Image();
-            var uriSource = new Uri(@"C:\Users\neoba\Desktop\GitProjekt\OGTavlor\bild1.JPG", UriKind.Relative);
+            var uriSource = new Uri("bild1.JPG", UriKind.Relative);
             BigPicture.Source = new BitmapImage(uriSource);
             picture1.Show();
         }

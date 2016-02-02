@@ -43,7 +43,7 @@
 
              FontFamily="Arial" FontSize="12" FontWeight="DemiBold">
 
-                <StackPanel Orientation="Horizontal">
+                <WrapPanel Orientation="Horizontal" Width="212">
                     <Button Click="PictureClick">
                         <Button.Template>
                             <ControlTemplate>
@@ -58,77 +58,7 @@
                     <Label>Artist:</Label>
                     </TextBlock>
 
-                </StackPanel>
-
-            </ListViewItem>
-
-            <ListViewItem Background="LightGray" Foreground="Black"  
-
-             FontFamily="Georgia" FontSize="14" FontWeight="Bold">
-
-                <StackPanel Orientation="Horizontal">
-
-                    <Image Height="30"></Image>
-
-                    <TextBlock Text="Tea"></TextBlock>
-
-                </StackPanel>
-
-            </ListViewItem>
-
-            <ListViewItem Background="LightBlue" Foreground="Purple"  
-
-             FontFamily="Verdana" FontSize="12" FontWeight="Bold">
-
-                <StackPanel Orientation="Horizontal">
-
-                    <Image Height="40"></Image>
-
-                    <TextBlock Text="OrangeJuice"></TextBlock>
-
-                </StackPanel>
-
-            </ListViewItem>
-
-            <ListViewItem Background="LightGreen" Foreground="Green"  
-
-             FontFamily="Georgia" FontSize="14" FontWeight="Bold">
-
-                <StackPanel Orientation="Horizontal">
-
-                    <Image Height="30"></Image>
-
-                    <TextBlock Text="Milk"></TextBlock>
-
-                </StackPanel>
-
-            </ListViewItem>
-
-            <ListViewItem Background="LightBlue" Foreground="Blue"  
-
-             FontFamily="Verdana" FontSize="12" FontWeight="Bold">
-
-                <StackPanel Orientation="Horizontal">
-
-                    <Image Height="30"></Image>
-
-                    <TextBlock Text="Iced Tea"></TextBlock>
-
-                </StackPanel>
-
-            </ListViewItem>
-
-            <ListViewItem Background="LightSlateGray" Foreground="Orange" 
-
-             FontFamily="Georgia" FontSize="14" FontWeight="Bold">
-
-                <StackPanel Orientation="Horizontal">
-
-                    <Image Height="30"></Image>
-
-                    <TextBlock Text="Mango Shake"></TextBlock>
-
-                </StackPanel>
+                </WrapPanel>
 
             </ListViewItem>
 
