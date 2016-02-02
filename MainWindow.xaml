@@ -79,10 +79,11 @@
                     <Label>Artist:</Label>
                     </TextBlock>
 
-                    <Button Click="RedigeraKonstverk_Click" Width="100" Height="50">
+                    <Button Click="RedigeraKonstverk_Click" Width="100" Height="50" Content="Redigera&#xD;&#xA;Konsverk" FontSize="14.667">
                         <Button.Resources>
                             <Style TargetType="{x:Type Button}">
-                                <Setter Property="HorizontalContentAlignment" Value="Right" />
+                                <Setter Property="HorizontalAlignment" Value="Right" />
+                                
                             </Style>
                         </Button.Resources>
                     </Button>

@@ -1,6 +1,7 @@
 ﻿using OGTavlor;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,6 +58,11 @@ namespace TavelProjektPT
 
         private void RedigeraKonstverk_Click(object sender, RoutedEventArgs e)
         {
+
+            
+
+            
+
             //Opens a window for editing artwork.
             EditArtWork EditArt = new EditArtWork();
             this.Close();

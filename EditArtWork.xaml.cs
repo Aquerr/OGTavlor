@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,10 +24,18 @@ namespace OGTavlor
         public EditArtWork()
         {
             InitializeComponent();
+            //SqlConnection cn = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWork; Integrated Security = True");
+            //cn.Open();
+
+            //SqlCommand cm = new SqlCommand("");
+            
+            //cn.Close();
+            
         }
 
         private void BtnSaveChanges_Click(object sender, RoutedEventArgs e)
         {
+            
             MessageBox.Show("Konstverkets ändringar har nu blivit sparade!");
             MainWindow StartSida = new MainWindow();
             this.Close();
