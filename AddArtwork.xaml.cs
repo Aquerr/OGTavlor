@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace TavelProjektPT
 {
@@ -26,6 +27,16 @@ namespace TavelProjektPT
 
         private void LäggTill_Click(object sender, RoutedEventArgs e)
         {
+            //Connect to SQL-Server.
+
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Admin\Databas\Tavlor.mdf;Integrated Security=True");
+            cn.Open();
+            SqlCommand cm = new SqlCommand($"INSERT INTO Artwork (Title,ArtistId,RoomId) VALUES ('TxtBxName',1,1)", cn);
+            cm.Connection = cn;
+
+            cm.ExecuteNonQuery();
+            cn.Close();
+
             OpenMainWindow();
         }
 
@@ -41,6 +52,6 @@ namespace TavelProjektPT
             this.Close();
             HomePage.Show();
         }
-        
+
     }
 }
