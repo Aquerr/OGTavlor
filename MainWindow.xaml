@@ -6,6 +6,27 @@
         xmlns:local="clr-namespace:TavelProjektPT"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280" ResizeMode="NoResize">
+    <Window.Resources>
+        <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}" 
+                x:Name="Bd" BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
             <GradientStop Color="Black"/>
@@ -33,12 +54,12 @@
             <ColumnDefinition Width="779*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="LäggTillKonstverk" Content="Tryck för att lägga till konstverk" HorizontalAlignment="Left" Margin="143,351,0,0" VerticalAlignment="Top" Width="199" Click="button_Click" Height="47" Grid.Row="1" Cursor="Hand" Background="{x:Null}" FontFamily="Arial"/>
-        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="329,10,0,0" TextWrapping="Wrap" Text="Sök här..." VerticalAlignment="Top" Width="120" TextChanged="SearchBox_TextChanged" Grid.Column="1" RenderTransformOrigin="0.5,0.5" GotKeyboardFocus="SearchBox_GotKeyboardFocus"/>
+        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="329,10,0,0" TextWrapping="Wrap" Text="Sök här..." VerticalAlignment="Top" Width="120" TextChanged="SearchBox_TextChanged" Grid.Column="1" RenderTransformOrigin="0.5,0.5" GotKeyboardFocus="SearchBox_GotKeyboardFocus" Template="{StaticResource TextBoxBaseControlTemplate}"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="168" Margin="87,84,0,0" VerticalAlignment="Top" Width="326" Source="logo.png" Grid.RowSpan="2" />
         <Button x:Name="TaBortKonstverk" Content="Tryck för att ta bort konstverk" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Margin="143,403,0,0" Height="47" Click="button_Click_1" Grid.Row="1" FontFamily="Arial" Background="{x:Null}" Cursor="Hand"/>
         <Button x:Name="RedigeraKonstverk" Content="Tryck för att redigera konstverk" HorizontalAlignment="Left" Margin="143,455,0,0" VerticalAlignment="Top" Width="199" Height="47" Click="RedigeraKonstverk_Click" Grid.Row="1" FontFamily="Arial" Background="{x:Null}" Cursor="Hand"/>
         <Label x:Name="label" Content="OGTavlor 2016" HorizontalAlignment="Left" Margin="0,528,0,0" VerticalAlignment="Top" Width="95" FontWeight="Bold" Height="26" Grid.Row="1"/>
-        <ListView x:Name="ArtworkListView" Grid.Column="1" HorizontalAlignment="Left" Height="643" Margin="10,38,0,0" VerticalAlignment="Top" Width="759" Background="White" Grid.RowSpan="2">
+        <ListView x:Name="ArtworkListView" Grid.Column="1" HorizontalAlignment="Left" Height="643" Margin="10,38,0,0" VerticalAlignment="Top" Width="759" Background="White" Grid.RowSpan="2" Grid.IsSharedSizeScope="True" BorderBrush="Black">
             <ListViewItem Background="White" Foreground="Black" Padding="+5"  
 
              FontFamily="Arial" FontSize="12" FontWeight="DemiBold" BorderBrush="Black">
@@ -57,6 +78,14 @@
                     <Label>Room:</Label><LineBreak></LineBreak>
                     <Label>Artist:</Label>
                     </TextBlock>
+
+                    <Button Click="RedigeraKonstverk_Click" Width="100" Height="50">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="HorizontalContentAlignment" Value="Right" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
 
                 </WrapPanel>
 
