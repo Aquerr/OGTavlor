@@ -23,17 +23,23 @@
         <TextBox x:Name="TxtBxMaterial" HorizontalAlignment="Left" Height="23" Margin="750,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TxtBxDate" HorizontalAlignment="Left" Height="23" Margin="750,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TxtBxStatus" HorizontalAlignment="Left" Height="23" Margin="750,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TxtBxCommentDescription" HorizontalAlignment="Left" Height="134" Margin="690,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349"/>
+        <TextBox x:Name="TxtBxCommentDescription" HorizontalAlignment="Left" Height="134" Margin="690,437,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349"/>
         <Label x:Name="LblName" Content="Namn" HorizontalAlignment="Left" Margin="690,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblRoom" Content="Rum" HorizontalAlignment="Left" Margin="690,63,0,0" VerticalAlignment="Top"/>
         <Label x:Name="LblMaterial" Content="Material" HorizontalAlignment="Left" Margin="690,116,0,0" VerticalAlignment="Top"/>
         <Label x:Name="LblDate" Content="Datum" HorizontalAlignment="Left" Margin="690,172,0,0" VerticalAlignment="Top"/>
         <Label x:Name="LblStatus" Content="Status" HorizontalAlignment="Left" Margin="690,224,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="LblCommentDescription" Content="Kommentar/beskrivning" HorizontalAlignment="Left" Margin="690,279,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblCommentDescription" Content="Kommentar/beskrivning" HorizontalAlignment="Left" Margin="690,406,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Cancel" Content="Avbryt" HorizontalAlignment="Left" Margin="1187,659,0,0" VerticalAlignment="Top" Width="75" Click="BtnCancel_Click"/>
         <Button x:Name="Add" Content="Spara ändringar" HorizontalAlignment="Left" Margin="1090,659,0,0" VerticalAlignment="Top" Width="92" Click="BtnSaveChanges_Click"/>
         <Button x:Name="ChangePicture" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="690,659,0,0" VerticalAlignment="Top" Width="95"/>
         <Image x:Name="Image" HorizontalAlignment="Left" Height="669" Margin="10,10,0,0" VerticalAlignment="Top" Width="659"/>
+        <TextBox x:Name="txbxBredd" HorizontalAlignment="Left" Height="23" Margin="750,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LblStatus_Copy" Content="Bredd" HorizontalAlignment="Left" Margin="690,267,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbxHöjd" HorizontalAlignment="Left" Height="23" Margin="750,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LblStatus_Copy1" Content="Höjd" HorizontalAlignment="Left" Margin="690,313,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbxKonstnär" HorizontalAlignment="Left" Height="23" Margin="750,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LblStatus_Copy2" Content="Konstnär" HorizontalAlignment="Left" Margin="690,363,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
