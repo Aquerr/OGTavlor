@@ -97,20 +97,26 @@ namespace TavelProjektPT
                 Listitem.Content = pnl;
 
                 ArtworkListView.Items.Add(Listitem);
+                
             }
         }
 
         private void PictureClick(object sender, RoutedEventArgs e)
         {
             // Opens a new window with big picture. Window is maximized from the start.
-            Window picture1 = new Window();
-            picture1.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            picture1.SourceInitialized += (s, a) => picture1.WindowState = WindowState.Maximized;
-            picture1.Title = "Bildspel";
-            Image BigPicture = new Image();
-            var uriSource = new Uri("bild1.JPG", UriKind.Relative);
-            BigPicture.Source = new BitmapImage(uriSource);
-            picture1.Show();
+            PictureSlideShow SlideShow = new PictureSlideShow();
+            this.Close();
+            SlideShow.Show();
+            //Window picture1 = new Window();
+            //picture1.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            //picture1.SourceInitialized += (s, a) => picture1.WindowState = WindowState.Maximized;
+            //picture1.Title = "Bildspel";
+            //Image BigPicture = new Image();
+            //BeginInit();
+            //var uriSource = new Uri("bild1.JPG", UriKind.Relative);
+            //EndInit();
+            //BigPicture.Source = new BitmapImage(uriSource);
+            //picture1.Show();
         }
     }
 }
