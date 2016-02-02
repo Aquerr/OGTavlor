@@ -75,22 +75,6 @@ namespace TavelProjektPT
 
         public void FillList()
         {
-           //List<User> users = new List<User>();
-           //users.Add(new User() { Id = 1, Name = "John Doe", Date = new DateTime(1971, 7, 23).ToString(), ImageUrl = "http://www.wpf-tutorial.com/images/misc/john_doe.jpg" }); //Temporary
-           //users.Add(new User() { Id = 2, Name = "Jane Doe", Date = new DateTime(1974, 1, 17).ToString() }); //Temp
-           //users.Add(new User() { Id = 3, Name = "Sammy Doe", Date = new DateTime(1991, 9, 2).ToString() }); //Temp
-                                                                                                              //lvDataBinding = namn på ListView
-            //    lvDataBinding.ItemsSource = users;
-
-            //         < Button FontWeight = "Bold" >
-            //  < WrapPanel >
-            //      < TextBlock Foreground = "Blue" > Multi </ TextBlock >
-            //       < TextBlock Foreground = "Red" > Color </ TextBlock >
-            //        < TextBlock > Button </ TextBlock >
-            //    </ WrapPanel >
-            //</ Button >
-
-
 
             foreach (var item in Konstverk.Artwork)
             {
@@ -117,10 +101,7 @@ namespace TavelProjektPT
 
                 Listitem.Content = pnl;
 
-               // btn.Content = pnl;
-
                 ArtworkListView.Items.Add(Listitem);
-                //   ArtworkListView.ItemsPanel.Template
             }
         }
 
@@ -128,7 +109,6 @@ namespace TavelProjektPT
         {
             // Opens a new window with big picture. Window is maximized from the start.
             Window picture1 = new Window();
-            picture1.Show();
             picture1.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             picture1.SourceInitialized += (s, a) => picture1.WindowState = WindowState.Maximized;
             picture1.Title = "Bildspel";
@@ -137,7 +117,7 @@ namespace TavelProjektPT
             Image BigPicture = new Image();
             var uriSource = new Uri("bild1.JPG", UriKind.Relative);
             BigPicture.Source = new BitmapImage(uriSource);
-            //picture1.Show();
+            picture1.Show();
         }
     }
 }
