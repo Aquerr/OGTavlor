@@ -27,16 +27,26 @@ namespace OGTavlor
 
         private void image_Loaded(object sender, RoutedEventArgs e)
         {
-            //BitMapImage
+            //Loads the choosen image into the Image in PictureSlideShow.xaml
 
             BitmapImage bmi = new BitmapImage();
             bmi.BeginInit();
             bmi.UriSource = new Uri(@"C:\Users\Admin\Desktop\Git\OGTavlor\OGTavlor\bild1.JPG");
             bmi.EndInit();
 
-            var image = sender as Image;
-            image.Source = bmi;
+            var picture = sender as Image;
+            picture.Source = bmi;
             
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            //Button that will change to the next picture.
+        }
+
+        private void Previous_Click(object sender, RoutedEventArgs e)
+        {
+            //Button that will change to the previous picture.
         }
     }
 }

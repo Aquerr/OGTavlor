@@ -107,16 +107,6 @@ namespace TavelProjektPT
             PictureSlideShow SlideShow = new PictureSlideShow();
             this.Close();
             SlideShow.Show();
-            //Window picture1 = new Window();
-            //picture1.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            //picture1.SourceInitialized += (s, a) => picture1.WindowState = WindowState.Maximized;
-            //picture1.Title = "Bildspel";
-            //Image BigPicture = new Image();
-            //BeginInit();
-            //var uriSource = new Uri("bild1.JPG", UriKind.Relative);
-            //EndInit();
-            //BigPicture.Source = new BitmapImage(uriSource);
-            //picture1.Show();
         }
     }
 }

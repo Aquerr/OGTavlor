@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OGTavlor"
         mc:Ignorable="d"
-        Title="Bildspel" Height="720" Width="1280" ResizeMode="NoResize">
+        Title="Bildspel" Height="720" Width="1280">
     <Grid>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="405" Margin="10,79,0,0" VerticalAlignment="Top" Width="1254" Loaded="image_Loaded"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="576" Margin="10,34,0,0" VerticalAlignment="Top" Width="1252" Loaded="image_Loaded" Stretch="None"/>
+        <Button x:Name="Next" Content="Nästa" HorizontalAlignment="Left" Margin="978,630,0,0" VerticalAlignment="Top" Width="111" Height="49" RenderTransformOrigin="-0.308,0.992" Click="Next_Click"/>
+        <Button x:Name="Previous" Content="Föregående" HorizontalAlignment="Left" Margin="219,630,0,0" VerticalAlignment="Top" Width="111" Height="49" Click="Previous_Click"/>
 
     </Grid>
 </Window>
