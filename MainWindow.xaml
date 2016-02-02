@@ -58,6 +58,14 @@
                     <Label>Artist:</Label>
                     </TextBlock>
 
+                    <Button Click="RedigeraKonstverk_Click" Width="100" Height="50">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="HorizontalContentAlignment" Value="Right" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
                 </WrapPanel>
 
             </ListViewItem>
