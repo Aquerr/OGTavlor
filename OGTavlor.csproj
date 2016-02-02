@@ -107,10 +107,26 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bild1.JPG" />
+    <Resource Include="bild1mini.JPG" />
+    <Resource Include="bild2.JPG" />
+    <Resource Include="bild2mini.JPG" />
+    <Resource Include="bild3.JPG" />
+    <Resource Include="bild3mini.JPG" />
+    <Resource Include="bild4.JPG" />
+    <Resource Include="bild4mini.JPG" />
+    <Resource Include="bild5.JPG" />
+    <Resource Include="bild5mini.JPG" />
+    <Resource Include="bild6.JPG" />
+    <Resource Include="bild6mini.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
