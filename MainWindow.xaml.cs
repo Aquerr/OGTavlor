@@ -73,21 +73,6 @@ namespace TavelProjektPT
             SearchBox.Text = "";
         }
 
-
-        public class User //Temp! ersätts sedan med klassen Konstverk MEN INTE ÄN!!!
-        {
-            public string Name { get; set; }
-            public int Id { get; set; }
-            //public string Mail { get; set; }
-            public string Date { get; set; }
-            public string ImageUrl { get; set; }
-
-            //public override string ToString()
-            //{
-            //    return this.Name + ", " + this.Age + " years old";
-            //}
-        }
-
         public void FillList()
         {
            //List<User> users = new List<User>();
@@ -143,6 +128,7 @@ namespace TavelProjektPT
         {
             // Opens a new window with big picture. Window is maximized from the start.
             Window picture1 = new Window();
+            picture1.Show();
             picture1.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             picture1.SourceInitialized += (s, a) => picture1.WindowState = WindowState.Maximized;
             picture1.Title = "Bildspel";
@@ -151,7 +137,7 @@ namespace TavelProjektPT
             Image BigPicture = new Image();
             var uriSource = new Uri("bild1.JPG", UriKind.Relative);
             BigPicture.Source = new BitmapImage(uriSource);
-            picture1.Show();
+            //picture1.Show();
         }
     }
 }
