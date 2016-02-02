@@ -30,8 +30,6 @@ namespace TavelProjektPT
         private void button_Click(object sender, RoutedEventArgs e)
         {
             //Opens a window for adding artwork.
-            //KVAR ATT ÖVERSÄTTA!
-
             AddArtwork AddArt = new AddArtwork();
             this.Close();
             AddArt.Show();
@@ -55,14 +53,11 @@ namespace TavelProjektPT
             {
                 MessageBox.Show("Konstverket har inte tagits bort", "Konstverket ej raderat");
             }
-
-
         }
 
         private void RedigeraKonstverk_Click(object sender, RoutedEventArgs e)
         {
             //Opens a window for editing artwork.
-
             EditArtWork EditArt = new EditArtWork();
             this.Close();
             EditArt.Show();
@@ -112,8 +107,6 @@ namespace TavelProjektPT
             picture1.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             picture1.SourceInitialized += (s, a) => picture1.WindowState = WindowState.Maximized;
             picture1.Title = "Bildspel";
-            //picture1.Height = 1080;
-            //picture1.Width = 1920;
             Image BigPicture = new Image();
             var uriSource = new Uri("bild1.JPG", UriKind.Relative);
             BigPicture.Source = new BitmapImage(uriSource);
