@@ -28,8 +28,21 @@ namespace TavelProjektPT
             LoadComboBox();
         }
 
+        string Title;
+        string Rum;
+        string Material;
+        string Date;
+        string Status;
+        int Width = 0;
+        int Height = 0;
+        string Comment;
+        string ImagePath;
+
         private void LäggTill_Click(object sender, RoutedEventArgs e)
         {
+            //Get Values from TextBoxes.
+            GetValues();
+
             //Connect to SQL-Server.
             SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\neoba\Databas\Tavlor.mdf;Integrated Security=True");
             cn.Open();
@@ -39,6 +52,10 @@ namespace TavelProjektPT
             cm.ExecuteNonQuery();
             cn.Close();
 
+            //Clear TextBoxes & assigned values.
+            ClearValues();
+
+            //Open Main Window.
             OpenMainWindow();
         }
 
@@ -58,7 +75,7 @@ namespace TavelProjektPT
                 comboBoxArtist.DisplayMemberPath = "Name";
                 comboBoxArtist.SelectedValuePath = "ArtistId";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("An error occurred while loading combobox.");
             }
@@ -105,7 +122,36 @@ namespace TavelProjektPT
             if (op.ShowDialog() == true)
             {
                 Image.Source = new BitmapImage(new Uri(op.FileName));
+                ImagePath = (Image.Source as BitmapImage).UriSource.AbsolutePath;
+                MessageBox.Show(ImagePath);
             }
+        }
+
+        //This function may be unnecessary.
+        private void GetValues()
+        {
+            Title = TxtBxTitle.Text;
+            Rum = TxtBxRoom.Text;
+            Material = TxtBxMaterial.Text;
+            Date = TxtBxDate.Text;
+            Status = TxtBxStatus.Text;
+            bool IsWidth = int.TryParse(TxtBxWidth.Text, out Width);
+            bool IsHeight = int.TryParse(TxtBxHeight.Text, out Height);
+            Comment = TxtBxCommentDescription.Text;
+        }
+
+        //This function may be unnecessary.
+        private void ClearValues()
+        {
+            Title = "";
+            Rum = "";
+            Material = "";
+            Date = "";
+            Status = "";
+            Width = 0;
+            Height = 0;
+            Comment = "";
+            ImagePath = "";
         }
     }
 }
