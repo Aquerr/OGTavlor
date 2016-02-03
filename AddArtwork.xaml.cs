@@ -44,12 +44,27 @@ namespace TavelProjektPT
 
         private void LoadComboBox()
         {
-            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\neoba\Databas\Tavlor.mdf;Integrated Security=True");
-            cn.Open();
-            SqlCommand cm = new SqlCommand("SELECT Name FROM Artist", cn);
-            cm.Connection = cn;
+                SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\neoba\Databas\Tavlor.mdf;Integrated Security=True");
+                cn.Open();
+                SqlCommand cm = new SqlCommand("SELECT ArtistId, Name FROM Artist", cn);
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cm);
+                DataTable dt = new DataTable("Artist");
+                da.Fill(dt);
 
-            cn.Close();
+                comboBoxArtist.DataContext = dt.DefaultView;
+                comboBoxArtist.SelectedValuePath = "ArtistId";
+                comboBoxArtist.DisplayMemberPath = "Name";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading combobox.");
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void ImagePanel_Drop(object sender, DragEventArgs e)

@@ -39,7 +39,7 @@
         <Label x:Name="LblWidth" Content="Bredd" HorizontalAlignment="Left" Margin="690,300,0,0" VerticalAlignment="Top" Height="41" Width="65" FontSize="20"/>
         <TextBox x:Name="TxtBxHeight" HorizontalAlignment="Left" Height="41" Margin="1060,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
         <Label x:Name="LblHeight" Content="Höjd" HorizontalAlignment="Left" Margin="973,300,0,0" VerticalAlignment="Top" Height="41" Width="65" FontSize="20"/>
-        <ComboBox x:Name="comboBoxArtist" HorizontalAlignment="Left" Margin="1104,19,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="comboBoxArtist" HorizontalAlignment="Left" Margin="1104,19,0,0" VerticalAlignment="Top" Width="144"/>
         <Label x:Name="LblArtist" Content="Konstnär" HorizontalAlignment="Left" Margin="1011,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,3.128" Height="45" Width="88" FontSize="20"/>
 
     </Grid>
