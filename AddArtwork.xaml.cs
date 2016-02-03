@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using Microsoft.Win32;
 
 namespace TavelProjektPT
 {
@@ -29,7 +30,7 @@ namespace TavelProjektPT
         {
             //Connect to SQL-Server.
 
-            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Admin\Databas\Tavlor.mdf;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\neoba\Databas\Tavlor.mdf;Integrated Security=True");
             cn.Open();
             SqlCommand cm = new SqlCommand($"INSERT INTO Artwork (Title,ArtistId,RoomId) VALUES ('TxtBxName',1,1)", cn);
             cm.Connection = cn;
@@ -38,6 +39,20 @@ namespace TavelProjektPT
             cn.Close();
 
             OpenMainWindow();
+        }
+
+        private void ImagePanel_Drop(object sender, DragEventArgs e)
+        {
+
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                // Note that you can have more than one file.
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                // Assuming you have one file that you care about, pass it off to whatever
+                // handling code you have defined.
+                MessageBox.Show(files[0]);
+            }
         }
 
         private void Avbryt_Click(object sender, RoutedEventArgs e)
@@ -53,5 +68,18 @@ namespace TavelProjektPT
             HomePage.Show();
         }
 
+        private void ChangePicture_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Select a picture";
+            op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+              "Portable Network Graphic (*.png)|*.png";
+            if (op.ShowDialog() == true)
+            {
+                Image.Source = new BitmapImage(new Uri(op.FileName));
+                MessageBox.Show(Image.Source.ToString());
+            }
+        }
     }
 }

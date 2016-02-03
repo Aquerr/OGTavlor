@@ -32,8 +32,8 @@
         <Label x:Name="LblCommentDescription" Content="Kommentar/beskrivning" HorizontalAlignment="Left" Margin="690,374,0,0" VerticalAlignment="Top" Height="42" Width="221" FontSize="20"/>
         <Button x:Name="Cancel" Content="Avbryt" HorizontalAlignment="Left" Margin="1158,635,0,0" VerticalAlignment="Top" Width="90" Click="Avbryt_Click" Height="35" Background="Transparent" BorderBrush="Black"/>
         <Button x:Name="Add" Content="Lägg Till" HorizontalAlignment="Left" Margin="1049,635,0,0" VerticalAlignment="Top" Width="90" Click="LäggTill_Click" Height="33" Background="Transparent" BorderBrush="Black"/>
-        <Button x:Name="ChangePicture" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="690,635,0,0" VerticalAlignment="Top" Width="95" Height="33" Background="Transparent" BorderBrush="Black"/>
-        <Image x:Name="Image" HorizontalAlignment="Left" Height="669" Margin="10,10,0,0" VerticalAlignment="Top" Width="659"/>
+        <Button x:Name="ChangePicture" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="690,635,0,0" VerticalAlignment="Top" Width="95" Height="33" Background="Transparent" BorderBrush="Black" Click="ChangePicture_Click"/>
+        <Image x:Name="Image" HorizontalAlignment="Left" Height="669" Margin="10,10,0,0" VerticalAlignment="Top" Width="659" AllowDrop="True" Drop="ImagePanel_Drop"/>
 
     </Grid>
 </Window>
