@@ -44,18 +44,19 @@ namespace TavelProjektPT
 
         private void LoadComboBox()
         {
-                SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\neoba\Databas\Tavlor.mdf;Integrated Security=True");
-                cn.Open();
-                SqlCommand cm = new SqlCommand("SELECT ArtistId, Name FROM Artist", cn);
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\neoba\Databas\Tavlor.mdf;Integrated Security=True");
+            cn.Open();
+            SqlCommand cm = new SqlCommand("SELECT ArtistId, Name FROM Artist", cn);
             try
             {
+                cm.ExecuteNonQuery();
                 SqlDataAdapter da = new SqlDataAdapter(cm);
-                DataTable dt = new DataTable("Artist");
-                da.Fill(dt);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "Artist");
 
-                comboBoxArtist.DataContext = dt.DefaultView;
-                comboBoxArtist.SelectedValuePath = "ArtistId";
+                comboBoxArtist.ItemsSource = ds.Tables[0].DefaultView;
                 comboBoxArtist.DisplayMemberPath = "Name";
+                comboBoxArtist.SelectedValuePath = "ArtistId";
             }
             catch(Exception ex)
             {
