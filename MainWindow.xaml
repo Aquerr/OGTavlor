@@ -68,7 +68,7 @@
                     <Button Click="PictureClick">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image Source="bild1mini.jpg" Height="100" Cursor="Hand"></Image>
+                                <Image Source="images\bild1mini.jpg" Height="100" Cursor="Hand"></Image>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>

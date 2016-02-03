@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F65A18E2-1ED5-45D1-9EC2-4948F60C9BF4}</ProjectGuid>
+    <ProjectGuid>{4B120FFD-97E5-47AF-B029-6C7719214157}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OGTavlor</RootNamespace>
@@ -81,8 +81,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PictureSlideShow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PictureSlideShow.xaml.cs">
+      <DependentUpon>PictureSlideShow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -112,21 +119,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\bild1.JPG" />
     <Resource Include="logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bild1.JPG" />
-    <Resource Include="bild1mini.JPG" />
-    <Resource Include="bild2.JPG" />
-    <Resource Include="bild2mini.JPG" />
-    <Resource Include="bild3.JPG" />
-    <Resource Include="bild3mini.JPG" />
-    <Resource Include="bild4.JPG" />
-    <Resource Include="bild4mini.JPG" />
-    <Resource Include="bild5.JPG" />
-    <Resource Include="bild5mini.JPG" />
-    <Resource Include="bild6.JPG" />
-    <Resource Include="bild6mini.JPG" />
+    <Resource Include="images\bild1mini.JPG" />
+    <Resource Include="images\bild2.JPG" />
+    <Resource Include="images\bild2mini.JPG" />
+    <Resource Include="images\bild3.JPG" />
+    <Resource Include="images\bild3mini.JPG" />
+    <Resource Include="images\bild4.JPG" />
+    <Resource Include="images\bild4mini.JPG" />
+    <Resource Include="images\bild5.JPG" />
+    <Resource Include="images\bild5mini.JPG" />
+    <Resource Include="images\bild6.JPG" />
+    <Resource Include="images\bild6mini.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

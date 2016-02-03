@@ -31,7 +31,7 @@ namespace OGTavlor
 
             BitmapImage bmi = new BitmapImage();
             bmi.BeginInit();
-            bmi.UriSource = new Uri(@"C:\Users\Admin\Desktop\Git\OGTavlor\OGTavlor\bild1.JPG");
+            bmi.UriSource = new Uri(@"images\bild1.JPG", UriKind.Relative);
             bmi.EndInit();
 
             var picture = sender as Image;
