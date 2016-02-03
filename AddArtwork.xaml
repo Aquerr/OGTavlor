@@ -33,7 +33,9 @@
         <Button x:Name="Cancel" Content="Avbryt" HorizontalAlignment="Left" Margin="1158,635,0,0" VerticalAlignment="Top" Width="90" Click="Avbryt_Click" Height="35" Background="Transparent" BorderBrush="Black"/>
         <Button x:Name="Add" Content="Lägg Till" HorizontalAlignment="Left" Margin="1049,635,0,0" VerticalAlignment="Top" Width="90" Click="LäggTill_Click" Height="33" Background="Transparent" BorderBrush="Black"/>
         <Button x:Name="ChangePicture" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="690,635,0,0" VerticalAlignment="Top" Width="95" Height="33" Background="Transparent" BorderBrush="Black" Click="ChangePicture_Click"/>
-        <Image x:Name="Image" HorizontalAlignment="Left" Height="669" Margin="10,10,0,0" VerticalAlignment="Top" Width="659" AllowDrop="True" Drop="ImagePanel_Drop"/>
+        <Image x:Name="Image" HorizontalAlignment="Left" Height="646" Margin="44,22,0,0" VerticalAlignment="Top" Width="624" AllowDrop="True" Drop="ImagePanel_Drop"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="646" Margin="44,22,0,0" VerticalAlignment="Top" Width="624"/>
+        <GroupBox x:Name="Menu" Header="Menu" HorizontalAlignment="Left" Margin="684,22,0,0" VerticalAlignment="Top" Height="659" Width="580" BorderBrush="Black"/>
 
     </Grid>
 </Window>
