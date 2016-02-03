@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using Microsoft.Win32;
+using System.Data;
 
 namespace TavelProjektPT
 {
@@ -24,21 +25,31 @@ namespace TavelProjektPT
         public AddArtwork()
         {
             InitializeComponent();
+            LoadComboBox();
         }
 
         private void LäggTill_Click(object sender, RoutedEventArgs e)
         {
             //Connect to SQL-Server.
-
             SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\neoba\Databas\Tavlor.mdf;Integrated Security=True");
             cn.Open();
-            SqlCommand cm = new SqlCommand($"INSERT INTO Artwork (Title,ArtistId,RoomId) VALUES ('TxtBxName',1,1)", cn);
+            SqlCommand cm = new SqlCommand($"INSERT INTO Artwork (Title,ArtistId,RoomId,ImagePath) VALUES ('TxtBxName',1,1,Image.Source.ToString())", cn);
             cm.Connection = cn;
 
             cm.ExecuteNonQuery();
             cn.Close();
 
             OpenMainWindow();
+        }
+
+        private void LoadComboBox()
+        {
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\neoba\Databas\Tavlor.mdf;Integrated Security=True");
+            cn.Open();
+            SqlCommand cm = new SqlCommand("SELECT Name FROM Artist", cn);
+            cm.Connection = cn;
+
+            cn.Close();
         }
 
         private void ImagePanel_Drop(object sender, DragEventArgs e)
@@ -78,7 +89,6 @@ namespace TavelProjektPT
             if (op.ShowDialog() == true)
             {
                 Image.Source = new BitmapImage(new Uri(op.FileName));
-                MessageBox.Show(Image.Source.ToString());
             }
         }
     }
