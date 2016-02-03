@@ -123,7 +123,7 @@ namespace TavelProjektPT
             {
                 Image.Source = new BitmapImage(new Uri(op.FileName));
                 ImagePath = (Image.Source as BitmapImage).UriSource.AbsolutePath;
-                MessageBox.Show(ImagePath);
+              //  MessageBox.Show(ImagePath);
             }
         }
 
