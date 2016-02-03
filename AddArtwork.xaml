@@ -18,13 +18,13 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <TextBox x:Name="TxtBxName" HorizontalAlignment="Left" Height="41" Margin="777,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
+        <TextBox x:Name="TxtBxTitle" HorizontalAlignment="Left" Height="41" Margin="777,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
         <TextBox x:Name="TxtBxRoom" HorizontalAlignment="Left" Height="41" Margin="777,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
         <TextBox x:Name="TxtBxMaterial" HorizontalAlignment="Left" Height="41" Margin="777,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
         <TextBox x:Name="TxtBxDate" HorizontalAlignment="Left" Height="41" Margin="777,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
         <TextBox x:Name="TxtBxStatus" HorizontalAlignment="Left" Height="41" Margin="777,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
         <TextBox x:Name="TxtBxCommentDescription" HorizontalAlignment="Left" Height="199" Margin="690,422,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="558" FontSize="24"/>
-        <Label x:Name="LblName" Content="Namn" HorizontalAlignment="Left" Margin="690,14,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,3.128" Height="41" Width="65" FontSize="20"/>
+        <Label x:Name="LblTitle" Content="Titel" HorizontalAlignment="Left" Margin="690,14,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,3.128" Height="41" Width="65" FontSize="20"/>
         <Label x:Name="lblRoom" Content="Rum" HorizontalAlignment="Left" Margin="690,71,0,0" VerticalAlignment="Top" Width="57" FontSize="20" Height="41"/>
         <Label x:Name="LblMaterial" Content="Material" HorizontalAlignment="Left" Margin="690,130,0,0" VerticalAlignment="Top" FontSize="20" Height="41"/>
         <Label x:Name="LblDate" Content="Datum" HorizontalAlignment="Left" Margin="690,186,0,0" VerticalAlignment="Top" Width="65" FontSize="19" Height="41"/>
@@ -33,8 +33,9 @@
         <Button x:Name="Cancel" Content="Avbryt" HorizontalAlignment="Left" Margin="1158,635,0,0" VerticalAlignment="Top" Width="90" Click="Avbryt_Click" Height="35" Background="Transparent" BorderBrush="Black"/>
         <Button x:Name="Add" Content="Lägg Till" HorizontalAlignment="Left" Margin="1049,635,0,0" VerticalAlignment="Top" Width="90" Click="LäggTill_Click" Height="33" Background="Transparent" BorderBrush="Black"/>
         <Button x:Name="ChangePicture" Content="Ändra Bilden" HorizontalAlignment="Left" Margin="690,635,0,0" VerticalAlignment="Top" Width="95" Height="33" Background="Transparent" BorderBrush="Black" Click="ChangePicture_Click"/>
-        <Image x:Name="Image" HorizontalAlignment="Center" VerticalAlignment="Center" Height="671" Margin="10,10,0,0" Width="624" AllowDrop="True" Drop="ImagePanel_Drop"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="658" Margin="10,10,0,0" VerticalAlignment="Top" Width="624"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="658" Margin="10,10,0,0" VerticalAlignment="Top" Width="624">
+            <Image x:Name="Image" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Height="658" Margin="-1" Width="624" AllowDrop="True" Drop="ImagePanel_Drop"/>
+        </Border>
         <TextBox x:Name="TxtBxWidth" HorizontalAlignment="Left" Height="41" Margin="777,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
         <Label x:Name="LblWidth" Content="Bredd" HorizontalAlignment="Left" Margin="690,300,0,0" VerticalAlignment="Top" Height="41" Width="65" FontSize="20"/>
         <TextBox x:Name="TxtBxHeight" HorizontalAlignment="Left" Height="41" Margin="1060,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="24"/>
