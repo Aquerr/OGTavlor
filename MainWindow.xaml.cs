@@ -129,7 +129,7 @@ namespace TavelProjektPT
                     WrapPanel pnl = new WrapPanel();
 
                     Image img = new Image();
-                    var uriSource = new Uri(dr[10].ToString(), UriKind.Relative);
+                    var uriSource = new Uri(dr[10].ToString(), UriKind.RelativeOrAbsolute);
                      img.Source = new BitmapImage(uriSource);
                      pnl.Children.Add(img);
                     
