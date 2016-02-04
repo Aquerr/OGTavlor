@@ -26,6 +26,7 @@ namespace TavelProjektPT
         {
             InitializeComponent();
             //FillList();
+            FillTheListWithDB();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -110,46 +111,51 @@ namespace TavelProjektPT
         
         public void FillTheListWithDB()
         {
-            SqlConnection cn = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWorks; Integrated Security = True");
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Aquerr\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
             //Open connection to Database
             cn.Open();
 
             //Simple Exception. (Simple look if getting data from database is working. If not then program will not crash.)
             try
             {
-                SqlCommand cm = new SqlCommand("SEECT * FROM Artwork", cn);
+                SqlCommand cm = new SqlCommand("SELECT * FROM Artwork", cn);
+                SqlDataReader dr = cm.ExecuteReader();
+
+                while (dr.Read())
+                {
+
+                    ListViewItem Listitem = new ListViewItem();
+                    Listitem.BorderBrush = Brushes.Black;
+                    WrapPanel pnl = new WrapPanel();
+
+                    Image img = new Image();
+                    var uriSource = new Uri(dr[10].ToString(), UriKind.Relative);
+                     img.Source = new BitmapImage(uriSource);
+                     pnl.Children.Add(img);
+                    
+                     TextBlock txt = new TextBlock();
+                     txt.Text = dr[1].ToString() + " ";
+                     pnl.Children.Add(txt);
+                    
+                     txt = new TextBlock();
+                     txt.Text = dr[2].ToString() + " ";
+                     pnl.Children.Add(txt);
+                    
+                     txt = new TextBlock();
+                     txt.Text = dr[3].ToString();
+                     pnl.Children.Add(txt);
+
+                    Listitem.Content = pnl;
+                    
+                     ArtworkListView.Items.Add(Listitem);
+                }
+                dr.Close();
+
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Something went wrong with database. " + "Exception: " +ex);
-            }
-
-            //The following will be connected to DataSet which will be taken from Database
-
-           // ListViewItem Listitem = new ListViewItem();
-           // Listitem.BorderBrush = Brushes.Black;
-           // WrapPanel pnl = new WrapPanel();
-           //
-           // Image img = new Image();
-           // var uriSource = new Uri(item.ImagePath, UriKind.Relative);
-           // img.Source = new BitmapImage(uriSource);
-           // pnl.Children.Add(img);
-           //
-           // TextBlock txt = new TextBlock();
-           // txt.Text = item.Name + " ";
-           // pnl.Children.Add(txt);
-           //
-           // txt = new TextBlock();
-           // txt.Text = item.Artist + " ";
-           // pnl.Children.Add(txt);
-           //
-           // txt = new TextBlock();
-           // txt.Text = item.Room;
-           // pnl.Children.Add(txt);
-           //
-           // Listitem.Content = pnl;
-           //
-           // ArtworkListView.Items.Add(Listitem);
+            }      
 
         }
 
