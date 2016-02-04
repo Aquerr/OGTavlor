@@ -110,13 +110,46 @@ namespace TavelProjektPT
         
         public void FillTheListWithDB()
         {
-            SqlConnection sqlcn = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWorks; Integrated Security = True");
+            SqlConnection cn = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWorks; Integrated Security = True");
             //Open connection to Database
-            sqlcn.Open();
-            SqlDataReader dr = null;
-            SqlCommand cm1 = new SqlCommand("SELECT Title,Date, FROM Artwork");
-            SqlCommand cm2 = new SqlCommand("SELECT Name FROM Room");
-            SqlCommand cm3 = new SqlCommand("SELECT Name FROM Artist");
+            cn.Open();
+
+            //Simple Exception. (Simple look if getting data from database is working. If not then program will not crash.)
+            try
+            {
+                SqlCommand cm = new SqlCommand("SEECT * FROM Artwork", cn);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Something went wrong with database. " + "Exception: " +ex);
+            }
+
+            //The following will be connected to DataSet which will be taken from Database
+
+           // ListViewItem Listitem = new ListViewItem();
+           // Listitem.BorderBrush = Brushes.Black;
+           // WrapPanel pnl = new WrapPanel();
+           //
+           // Image img = new Image();
+           // var uriSource = new Uri(item.ImagePath, UriKind.Relative);
+           // img.Source = new BitmapImage(uriSource);
+           // pnl.Children.Add(img);
+           //
+           // TextBlock txt = new TextBlock();
+           // txt.Text = item.Name + " ";
+           // pnl.Children.Add(txt);
+           //
+           // txt = new TextBlock();
+           // txt.Text = item.Artist + " ";
+           // pnl.Children.Add(txt);
+           //
+           // txt = new TextBlock();
+           // txt.Text = item.Room;
+           // pnl.Children.Add(txt);
+           //
+           // Listitem.Content = pnl;
+           //
+           // ArtworkListView.Items.Add(Listitem);
 
         }
 
