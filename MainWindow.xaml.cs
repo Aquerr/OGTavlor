@@ -108,7 +108,7 @@ namespace TavelProjektPT
         //    }
         //}
 
-        
+
         public void FillTheListWithDB()
         {
             SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Aquerr\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
@@ -130,32 +130,35 @@ namespace TavelProjektPT
 
                     Image img = new Image();
                     var uriSource = new Uri(dr[10].ToString(), UriKind.RelativeOrAbsolute);
-                     img.Source = new BitmapImage(uriSource);
-                     pnl.Children.Add(img);
-                    
-                     TextBlock txt = new TextBlock();
-                     txt.Text = dr[1].ToString() + " ";
-                     pnl.Children.Add(txt);
-                    
-                     txt = new TextBlock();
-                     txt.Text = dr[2].ToString() + " ";
-                     pnl.Children.Add(txt);
-                    
-                     txt = new TextBlock();
-                     txt.Text = dr[3].ToString();
-                     pnl.Children.Add(txt);
+                    img.Source = new BitmapImage(uriSource);
+                    img.MaxWidth = 200;
+                    img.MaxHeight = 150;
+                    img.Stretch = Stretch.Fill;
+                    pnl.Children.Add(img);
+
+                    TextBlock txt = new TextBlock();
+                    txt.Text = dr[1].ToString() + " ";
+                    pnl.Children.Add(txt);
+
+                    txt = new TextBlock();
+                    txt.Text = dr[2].ToString() + " ";
+                    pnl.Children.Add(txt);
+
+                    txt = new TextBlock();
+                    txt.Text = dr[3].ToString();
+                    pnl.Children.Add(txt);
 
                     Listitem.Content = pnl;
-                    
-                     ArtworkListView.Items.Add(Listitem);
+
+                    ArtworkListView.Items.Add(Listitem);
                 }
                 dr.Close();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Something went wrong with database. " + "Exception: " +ex);
-            }      
+                MessageBox.Show("Something went wrong with database. " + "Exception: " + ex);
+            }
 
         }
 
@@ -167,7 +170,7 @@ namespace TavelProjektPT
             SlideShow.Show();
         }
 
-        
+
 
 
         //Search function
@@ -176,14 +179,14 @@ namespace TavelProjektPT
             //Search function
             if (e.Key == Key.Enter)
             {
-                if (SearchBox.Text=="")
+                if (SearchBox.Text == "")
                 {
                     MessageBox.Show("Du har inte sökt efter någonting, sök igen", "Tom sökruta");
                 }
 
                 //if (SearchBox.Text=="Uggla")
                 //{
-                    
+
                 //}
             }
 
