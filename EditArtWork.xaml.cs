@@ -35,9 +35,11 @@ namespace OGTavlor
             SqlConnection cn = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWork; Integrated Security = True");
             DataTable dt = new DataTable();
             cn.Open();
-            SqlDataReader myReader = null;
-            SqlCommand cm = new SqlCommand("select * from Artwork", cn);
+
+            SqlDataReader myReader = null;            
+            SqlCommand cm = new SqlCommand("select * from Artwork", cn);            
             myReader = cm.ExecuteReader();
+            
             while (myReader.Read())
             {
                 TxtBxName.Text = (myReader["Title"].ToString());
@@ -47,15 +49,27 @@ namespace OGTavlor
                 TxtBxStatus.Text = (myReader["Status"].ToString());
                 txbxBredd.Text = (myReader["Width"].ToString());
                 txbxHöjd.Text = (myReader["Height"].ToString());
-                txbxKonstnär.Text = (myReader["ArtistId"].ToString());
+                
+            }            
+            myReader.Close();
+
+            SqlDataReader thyReader = null;
+            SqlCommand com = new SqlCommand("select Name from Artist", cn);           
+            thyReader = com.ExecuteReader();
+
+            while (thyReader.Read())
+            {
+                txbxKonstnär.Text = (thyReader["Name"].ToString());
             }
+            thyReader.Close();
+
             cn.Close();
         }
 
         private void BtnSaveChanges_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWork; Integrated Security = True");
-            SqlCommand cmd = new SqlCommand("UPDATE Artwork SET Title = @Title, RoomId = @RoomId, Material = @Material, Date = @Date, Status = @Status, Width = @Width, Height = @Height, ArtistId = @ArtistId", con);
+            SqlCommand cmd = new SqlCommand("UPDATE Artwork SET Title = @Title, RoomId = @RoomId, Material = @Material, Date = @Date, Status = @Status, Width = @Width, Height = @Height", con);
             con.Open();
 
             cmd.Parameters.AddWithValue("@Title", TxtBxName.Text);
@@ -65,9 +79,16 @@ namespace OGTavlor
             cmd.Parameters.AddWithValue("@Status", TxtBxStatus.Text);
             cmd.Parameters.AddWithValue("@Width", txbxBredd.Text);
             cmd.Parameters.AddWithValue("@Height", txbxHöjd.Text);
-            cmd.Parameters.AddWithValue("@ArtistId", txbxKonstnär.Text);
+            
 
             cmd.ExecuteNonQuery();
+
+            SqlCommand comd = new SqlCommand("UPDATE Artist SET Name = @Name", con);
+
+            comd.Parameters.AddWithValue("@Name", txbxKonstnär.Text);
+
+            comd.ExecuteNonQuery();
+
             con.Close();
             MessageBox.Show("Konstverkets ändringar har nu blivit sparade!");
             MainWindow StartSida = new MainWindow();
