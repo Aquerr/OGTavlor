@@ -54,7 +54,21 @@ namespace OGTavlor
 
         private void BtnSaveChanges_Click(object sender, RoutedEventArgs e)
         {
-            
+            SqlConnection con = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWork; Integrated Security = True");
+            SqlCommand cmd = new SqlCommand("UPDATE Artwork SET Title = @Title, RoomId = @RoomId, Material = @Material, Date = @Date, Status = @Status, Width = @Width, Height = @Height, ArtistId = @ArtistId", con);
+            con.Open();
+
+            cmd.Parameters.AddWithValue("@Title", TxtBxName.Text);
+            cmd.Parameters.AddWithValue("@RoomId", TxtBxRoom.Text);
+            cmd.Parameters.AddWithValue("@Material", TxtBxMaterial.Text);
+            cmd.Parameters.AddWithValue("@Date", TxtBxDate.Text);
+            cmd.Parameters.AddWithValue("@Status", TxtBxStatus.Text);
+            cmd.Parameters.AddWithValue("@Width", txbxBredd.Text);
+            cmd.Parameters.AddWithValue("@Height", txbxHöjd.Text);
+            cmd.Parameters.AddWithValue("@ArtistId", txbxKonstnär.Text);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
             MessageBox.Show("Konstverkets ändringar har nu blivit sparade!");
             MainWindow StartSida = new MainWindow();
             this.Close();
