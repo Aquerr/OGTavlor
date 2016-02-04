@@ -25,7 +25,7 @@ namespace TavelProjektPT
         public MainWindow()
         {
             InitializeComponent();
-            FillList();
+            //FillList();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -74,37 +74,50 @@ namespace TavelProjektPT
             SearchBox.Text = "";
         }
 
-        public void FillList()
+        //public void FillList()
+        //{
+
+        //    foreach (var item in Konstverk.Artwork)
+        //    {
+        //        ListViewItem Listitem = new ListViewItem();
+        //        Listitem.BorderBrush = Brushes.Black;
+        //        WrapPanel pnl = new WrapPanel();
+
+        //        Image img = new Image();
+        //        var uriSource = new Uri(item.ImagePath, UriKind.Relative);
+        //        img.Source = new BitmapImage(uriSource);
+        //        pnl.Children.Add(img);
+
+        //        TextBlock txt = new TextBlock();
+        //        txt.Text = item.Name + " ";
+        //        pnl.Children.Add(txt);
+
+        //        txt = new TextBlock();
+        //        txt.Text = item.Artist + " ";
+        //        pnl.Children.Add(txt);
+
+        //        txt = new TextBlock();
+        //        txt.Text = item.Room;
+        //        pnl.Children.Add(txt);
+
+        //        Listitem.Content = pnl;
+
+        //        ArtworkListView.Items.Add(Listitem);
+
+        //    }
+        //}
+
+        
+        public void FillTheListWithDB()
         {
+            SqlConnection sqlcn = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWorks; Integrated Security = True");
+            //Open connection to Database
+            sqlcn.Open();
+            SqlDataReader dr = null;
+            SqlCommand cm1 = new SqlCommand("SELECT Title,Date, FROM Artwork");
+            SqlCommand cm2 = new SqlCommand("SELECT Name FROM Room");
+            SqlCommand cm3 = new SqlCommand("SELECT Name FROM Artist");
 
-            foreach (var item in Konstverk.Artwork)
-            {
-                ListViewItem Listitem = new ListViewItem();
-                Listitem.BorderBrush = Brushes.Black;
-                WrapPanel pnl = new WrapPanel();
-
-                Image img = new Image();
-                var uriSource = new Uri(item.ImagePath, UriKind.Relative);
-                img.Source = new BitmapImage(uriSource);
-                pnl.Children.Add(img);
-
-                TextBlock txt = new TextBlock();
-                txt.Text = item.Name + " ";
-                pnl.Children.Add(txt);
-
-                txt = new TextBlock();
-                txt.Text = item.Artist + " ";
-                pnl.Children.Add(txt);
-
-                txt = new TextBlock();
-                txt.Text = item.Room;
-                pnl.Children.Add(txt);
-
-                Listitem.Content = pnl;
-
-                ArtworkListView.Items.Add(Listitem);
-
-            }
         }
 
         private void PictureClick(object sender, RoutedEventArgs e)
@@ -114,6 +127,9 @@ namespace TavelProjektPT
             this.Close();
             SlideShow.Show();
         }
+
+        
+
 
         //Search function
         private void SearchBox_KeyDown(object sender, KeyEventArgs e)
@@ -126,10 +142,10 @@ namespace TavelProjektPT
                     MessageBox.Show("Du har inte sökt efter någonting, sök igen", "Tom sökruta");
                 }
 
-                if (SearchBox.Text=="Uggla")
-                {
-
-                }
+                //if (SearchBox.Text=="Uggla")
+                //{
+                    
+                //}
             }
 
         }
