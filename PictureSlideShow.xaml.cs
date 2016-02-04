@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TavelProjektPT;
 
 namespace OGTavlor
 {
@@ -47,6 +48,20 @@ namespace OGTavlor
         private void Previous_Click(object sender, RoutedEventArgs e)
         {
             //Button that will change to the previous picture.
+        }
+
+        private void BackToMainPage_Click(object sender, RoutedEventArgs e)
+        {
+            //Button that will redirect user to the Main Page.
+            OpenMainWindow();
+        }
+
+        public void OpenMainWindow()
+        {
+            //Opens MainWindow and closes the AddArtwork page.
+            MainWindow HomePage = new MainWindow();
+            this.Close();
+            HomePage.Show();
         }
     }
 }
