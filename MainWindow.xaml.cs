@@ -59,9 +59,9 @@ namespace TavelProjektPT
         private void RedigeraKonstverk_Click(object sender, RoutedEventArgs e)
         {
 
-            
 
-            
+
+
 
             //Opens a window for editing artwork.
             EditArtWork EditArt = new EditArtWork();
@@ -103,7 +103,7 @@ namespace TavelProjektPT
                 Listitem.Content = pnl;
 
                 ArtworkListView.Items.Add(Listitem);
-                
+
             }
         }
 
@@ -113,6 +113,25 @@ namespace TavelProjektPT
             PictureSlideShow SlideShow = new PictureSlideShow();
             this.Close();
             SlideShow.Show();
+        }
+
+        //Search function
+        private void SearchBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            //Search function
+            if (e.Key == Key.Enter)
+            {
+                if (SearchBox.Text=="")
+                {
+                    MessageBox.Show("Du har inte sökt efter någonting, sök igen", "Tom sökruta");
+                }
+
+                if (SearchBox.Text=="Uggla")
+                {
+
+                }
+            }
+
         }
     }
 }
