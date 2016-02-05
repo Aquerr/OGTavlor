@@ -32,7 +32,7 @@ namespace OGTavlor
 
         private void PopulateFields()
         {
-            SqlConnection cn = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWork; Integrated Security = True");
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Admin\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
             DataTable dt = new DataTable();
             cn.Open();
 

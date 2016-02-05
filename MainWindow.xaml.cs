@@ -110,14 +110,25 @@ namespace TavelProjektPT
         
         public void FillTheListWithDB()
         {
-            SqlConnection sqlcn = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWorks; Integrated Security = True");
+            SqlConnection sqlcn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Admin\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
             //Open connection to Database
-            sqlcn.Open();
-            SqlDataReader dr = null;
-            SqlCommand cm1 = new SqlCommand("SELECT Title,Date, FROM Artwork");
-            SqlCommand cm2 = new SqlCommand("SELECT Name FROM Room");
-            SqlCommand cm3 = new SqlCommand("SELECT Name FROM Artist");
 
+            sqlcn.Open();
+
+            SqlDataReader dr = null;
+            SqlCommand cm1 = new SqlCommand("SELECT Title,Date, FROM Artwork",sqlcn);
+            SqlCommand cm2 = new SqlCommand("SELECT Name FROM Room",sqlcn);
+            SqlCommand cm3 = new SqlCommand("SELECT Name FROM Artist",sqlcn);
+
+            dr = cm1.ExecuteReader();
+            dr = cm2.ExecuteReader();
+            dr = cm3.ExecuteReader();
+
+            while(dr.Read())
+            {
+
+            }
+            dr.Close();
         }
 
         private void PictureClick(object sender, RoutedEventArgs e)
