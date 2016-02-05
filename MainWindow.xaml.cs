@@ -49,6 +49,12 @@ namespace TavelProjektPT
             MessageBoxResult result = MessageBox.Show("Är du säker på att du vill ta bort konstverket?", "Ta bort konstverk", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)    //"Yes" button
             {
+                Button button = sender as Button;
+                ListViewItem item = button.DataContext as ListViewItem;
+                
+                SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Aquerr\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
+                SqlCommand cm = new SqlCommand("DELETE FROM Artwork WHERE Id='1'",cn);
+
                 MessageBox.Show("Du har nu tagit bort detta konstverk", "Borttagget konstverk.");
             }
             if (result == MessageBoxResult.No) //"No" button.
@@ -168,6 +174,7 @@ namespace TavelProjektPT
                     btn.Width = 60;
                     btn.Height = 30;
                     btn.Click += button_Click_1;
+                    btn.Background = Brushes.Orange;
                     pnl.Children.Add(btn);
 
                     Listitem.Content = pnl;

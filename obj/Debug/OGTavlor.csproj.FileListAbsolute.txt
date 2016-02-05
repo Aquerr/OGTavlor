@@ -1,2 +1,22 @@
 c:\users\admin\documents\visual studio 2015\Projects\OGTavlor\OGTavlor\bin\Debug\OGTavlor.exe.config
 C:\Users\Admin\Desktop\Git\OGTavlor\OGTavlor\bin\Debug\OGTavlor.exe.config
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\OGTavlor.csprojResolveAssemblyReference.cache
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\AddArtwork.g.cs
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\EditArtWork.g.cs
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\MainWindow.g.cs
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\PictureSlideShow.g.cs
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\App.g.cs
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\OGTavlor_MarkupCompile.cache
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\OGTavlor_MarkupCompile.lref
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\OGTavlor.exe
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\OGTavlor.pdb
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\bin\Debug\OGTavlor.exe.config
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\bin\Debug\OGTavlor.exe
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\bin\Debug\OGTavlor.pdb
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\AddArtwork.baml
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\EditArtWork.baml
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\MainWindow.baml
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\PictureSlideShow.baml
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\OGTavlor.g.resources
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\OGTavlor.Properties.Resources.resources
+C:\Users\Aquerr\Desktop\GitRepositories\OGTavlor\obj\Debug\OGTavlor.csproj.GenerateResource.Cache
