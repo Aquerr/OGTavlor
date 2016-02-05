@@ -26,6 +26,7 @@ namespace TavelProjektPT
         {
             InitializeComponent();
             //FillList();
+            FillTheListWithDB();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -107,18 +108,66 @@ namespace TavelProjektPT
         //    }
         //}
 
-        
+
         public void FillTheListWithDB()
         {
-            SqlConnection sqlcn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Admin\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Aquerr\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
             //Open connection to Database
+            cn.Open();
 
-            sqlcn.Open();
+            //Simple Exception. (Simple look if getting data from database is working. If not then program will not crash.)
+            try
+            {
+                SqlCommand cm = new SqlCommand("SELECT * FROM Artwork", cn);
+                SqlDataReader dr = cm.ExecuteReader();
 
-            SqlDataReader dr = null;
-            SqlCommand cm1 = new SqlCommand("SELECT Title,Date, FROM Artwork",sqlcn);
-            SqlCommand cm2 = new SqlCommand("SELECT Name FROM Room",sqlcn);
-            SqlCommand cm3 = new SqlCommand("SELECT Name FROM Artist",sqlcn);
+                while (dr.Read())
+                {
+
+                    ListViewItem Listitem = new ListViewItem();
+                    Listitem.BorderBrush = Brushes.Black;
+                    WrapPanel pnl = new WrapPanel();
+
+                    Image img = new Image();
+                    var uriSource = new Uri(dr[10].ToString(), UriKind.RelativeOrAbsolute);
+                    img.Source = new BitmapImage(uriSource);
+                    img.MaxWidth = 200;
+                    img.MaxHeight = 150;
+                    img.Stretch = Stretch.Fill;
+                    pnl.Children.Add(img);
+
+                    TextBlock txt = new TextBlock();
+                    txt.Text = dr[1].ToString() + " ";
+                    pnl.Children.Add(txt);
+
+                    txt = new TextBlock();
+                    txt.Text = dr[2].ToString() + " ";
+                    pnl.Children.Add(txt);
+
+                    txt = new TextBlock();
+                    txt.Text = dr[3].ToString();
+                    pnl.Children.Add(txt);
+
+                    Button btn = new Button();
+                    btn.HorizontalAlignment = HorizontalAlignment.Right;
+                    btn.VerticalAlignment = VerticalAlignment.Bottom;
+                    btn.Name = "TaBort";
+                    btn.Content = "Ta Bort";
+                    btn.Width = 60;
+                    btn.Height = 30;
+                    pnl.Children.Add(btn);
+
+                    Listitem.Content = pnl;
+
+                    ArtworkListView.Items.Add(Listitem);
+                }
+                dr.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong with database. " + "Exception: " + ex);
+            }
 
             dr = cm1.ExecuteReader();
             dr = cm2.ExecuteReader();
@@ -139,7 +188,7 @@ namespace TavelProjektPT
             SlideShow.Show();
         }
 
-        
+
 
 
         //Search function
@@ -148,14 +197,14 @@ namespace TavelProjektPT
             //Search function
             if (e.Key == Key.Enter)
             {
-                if (SearchBox.Text=="")
+                if (SearchBox.Text == "")
                 {
                     MessageBox.Show("Du har inte sökt efter någonting, sök igen", "Tom sökruta");
                 }
 
                 //if (SearchBox.Text=="Uggla")
                 //{
-                    
+
                 //}
             }
 

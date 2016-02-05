@@ -42,26 +42,37 @@ namespace TavelProjektPT
         {
             //Get Values from TextBoxes.
             GetValues();
-
+            MessageBox.Show(ImagePath);
             //Connect to SQL-Server.
-            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\neoba\Databas\Tavlor.mdf;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Aquerr\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
             cn.Open();
-            SqlCommand cm = new SqlCommand($"INSERT INTO Artwork (Title,ArtistId,RoomId,ImagePath) VALUES ('TxtBxName',1,1,Image.Source.ToString())", cn);
-            cm.Connection = cn;
 
-            cm.ExecuteNonQuery();
-            cn.Close();
+            try
+            {
+                SqlCommand cm = new SqlCommand("INSERT INTO Artwork (Title,Material,Date,Width,Height,Comment,Status,ArtistId,RoomId,ImagePath) VALUES ('"+Title+"','"+Material+"','"+Date+"','"+Width+"','"+Height+"','"+Comment+"','"+Status+"','"+comboBoxArtist.SelectedValue+"',1,'"+ImagePath+"')",cn);
+                cm.Connection = cn;
 
-            //Clear TextBoxes & assigned values.
-            ClearValues();
+                cm.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Du har inte skrivit in all information!" + ex);
+            }
+            finally
+            {
+                cn.Close();
 
-            //Open Main Window.
-            OpenMainWindow();
+                //Clear TextBoxes & assigned values.
+                ClearValues();
+
+                //Open Main Window.
+                OpenMainWindow();
+            }
         }
 
         private void LoadComboBox()
         {
-            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\neoba\Databas\Tavlor.mdf;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Aquerr\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
             cn.Open();
             SqlCommand cm = new SqlCommand("SELECT ArtistId, Name FROM Artist", cn);
             try
@@ -77,7 +88,7 @@ namespace TavelProjektPT
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while loading combobox.");
+                MessageBox.Show("An error occurred while loading combobox. ");
             }
             finally
             {
