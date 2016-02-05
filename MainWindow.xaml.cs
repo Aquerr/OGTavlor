@@ -65,11 +65,6 @@ namespace TavelProjektPT
 
         private void RedigeraKonstverk_Click(object sender, RoutedEventArgs e)
         {
-
-
-
-
-
             //Opens a window for editing artwork.
             EditArtWork EditArt = new EditArtWork();
             this.Close();
@@ -117,7 +112,7 @@ namespace TavelProjektPT
 
         public void FillTheListWithDB()
         {
-            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Aquerr\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Admin\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
             //Open connection to Database
             cn.Open();
 
@@ -188,16 +183,6 @@ namespace TavelProjektPT
             {
                 MessageBox.Show("Something went wrong with database. " + "Exception: " + ex);
             }
-
-         // dr = cm1.ExecuteReader();
-         // dr = cm2.ExecuteReader();
-         // dr = cm3.ExecuteReader();
-         //
-         // while(dr.Read())
-         // {
-         //
-         // }
-         // dr.Close();
         }
 
         private void PictureClick(object sender, RoutedEventArgs e)
@@ -207,9 +192,6 @@ namespace TavelProjektPT
             this.Close();
             SlideShow.Show();
         }
-
-
-
 
         //Search function
         private void SearchBox_KeyDown(object sender, KeyEventArgs e)
@@ -222,6 +204,16 @@ namespace TavelProjektPT
                     MessageBox.Show("Du har inte sökt efter någonting, sök igen", "Tom sökruta");
                 }
 
+                SqlConnection scn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Admin\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
+                scn.Open();
+
+                SqlCommand scm = new SqlCommand();
+                SqlDataReader sdr = scm.ExecuteReader();
+
+                while(sdr.Read())
+                {
+
+                }
                 //if (SearchBox.Text=="Uggla")
                 //{
 

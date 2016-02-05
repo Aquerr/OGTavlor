@@ -62,9 +62,9 @@
         <ListView x:Name="ArtworkListView" Grid.Column="1" HorizontalAlignment="Left" Height="643" Margin="10,38,0,0" VerticalAlignment="Top" Width="759" Background="White" Grid.RowSpan="2" Grid.IsSharedSizeScope="True" BorderBrush="Black">
             <ListViewItem Background="White" Foreground="Black" Padding="+5"  
 
-             FontFamily="Arial" FontSize="12" FontWeight="DemiBold" BorderBrush="Black">
+             FontFamily="Arial" FontSize="12" FontWeight="DemiBold" BorderBrush="Black" Width="751">
 
-                <WrapPanel Orientation="Horizontal" Width="212">
+                <WrapPanel Orientation="Horizontal" Width="742" Height="185">
                     <Button Click="PictureClick">
                         <Button.Template>
                             <ControlTemplate>
@@ -73,17 +73,17 @@
                         </Button.Template>
                     </Button>
 
-                    <TextBlock><Label>Name:</Label><LineBreak></LineBreak>
+                    <TextBlock Width="496">
+                    <Label>Name:</Label><LineBreak></LineBreak>
                     <Label>Date:</Label><LineBreak></LineBreak>
                     <Label>Room:</Label><LineBreak></LineBreak>
-                    <Label>Artist:</Label>
+                    <Label>Artist:</Label><Label></Label>
                     </TextBlock>
-
-                    <Button Click="RedigeraKonstverk_Click" Width="100" Height="50" Content="Redigera&#xD;&#xA;Konsverk" FontSize="14.667">
+                    <Button Click="RedigeraKonstverk_Click" Width="100" Height="50" Content="Redigera&#xA;Konstverk" FontSize="14.667" RenderTransformOrigin="-1.44,2.54">
                         <Button.Resources>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="HorizontalAlignment" Value="Right" />
-                                
+
                             </Style>
                         </Button.Resources>
                     </Button>

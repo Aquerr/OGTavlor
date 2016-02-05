@@ -44,7 +44,7 @@ namespace TavelProjektPT
             GetValues();
             MessageBox.Show(ImagePath);
             //Connect to SQL-Server.
-            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Aquerr\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Admin\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
             cn.Open();
 
             try
@@ -72,7 +72,7 @@ namespace TavelProjektPT
 
         private void LoadComboBox()
         {
-            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Aquerr\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Admin\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
             cn.Open();
             SqlCommand cm = new SqlCommand("SELECT ArtistId, Name FROM Artist", cn);
             try

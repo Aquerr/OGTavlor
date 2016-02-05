@@ -68,7 +68,7 @@ namespace OGTavlor
 
         private void BtnSaveChanges_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; AttachDbFilename = C:\Users\Admin\Databas\Tavlor.mdf; Initial Catalog = ArtWork; Integrated Security = True");
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Admin\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
             SqlCommand cmd = new SqlCommand("UPDATE Artwork SET Title = @Title, RoomId = @RoomId, Material = @Material, Date = @Date, Status = @Status, Width = @Width, Height = @Height", con);
             con.Open();
 
