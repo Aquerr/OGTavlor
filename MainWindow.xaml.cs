@@ -148,6 +148,15 @@ namespace TavelProjektPT
                     txt.Text = dr[3].ToString();
                     pnl.Children.Add(txt);
 
+                    Button btn = new Button();
+                    btn.HorizontalAlignment = HorizontalAlignment.Right;
+                    btn.VerticalAlignment = VerticalAlignment.Bottom;
+                    btn.Name = "TaBort";
+                    btn.Content = "Ta Bort";
+                    btn.Width = 60;
+                    btn.Height = 30;
+                    pnl.Children.Add(btn);
+
                     Listitem.Content = pnl;
 
                     ArtworkListView.Items.Add(Listitem);
