@@ -53,7 +53,7 @@ namespace TavelProjektPT
                 ListViewItem item = button.DataContext as ListViewItem;
                 
                 SqlConnection cn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\Aquerr\Databas\Tavlor.mdf;Initial Catalog=ArtWorks;Integrated Security=True");
-                SqlCommand cm = new SqlCommand("DELETE FROM Artwork WHERE Id='1'",cn);
+                SqlCommand cm = new SqlCommand("DELETE FROM Artwork WHERE Id='2'",cn);
 
                 MessageBox.Show("Du har nu tagit bort detta konstverk", "Borttagget konstverk.");
             }
