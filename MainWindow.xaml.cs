@@ -137,15 +137,27 @@ namespace TavelProjektPT
                     pnl.Children.Add(img);
 
                     TextBlock txt = new TextBlock();
-                    txt.Text = dr[1].ToString() + " ";
+                    txt.Text = "Titel: "+ dr[1].ToString() + " ";
                     pnl.Children.Add(txt);
 
                     txt = new TextBlock();
-                    txt.Text = dr[2].ToString() + " ";
+                    txt.Text = "Material: "+dr[2].ToString() + " ";
                     pnl.Children.Add(txt);
 
                     txt = new TextBlock();
-                    txt.Text = dr[3].ToString();
+                    txt.Text = "Datum: "+dr[3].ToString() + " ";
+                    pnl.Children.Add(txt);
+
+                    txt = new TextBlock();
+                    txt.Text = "Widht: " + dr[4].ToString() + " ";
+                    pnl.Children.Add(txt);
+
+                    txt = new TextBlock();
+                    txt.Text = "Height: " + dr[5].ToString() + " ";
+                    pnl.Children.Add(txt);
+
+                    txt = new TextBlock();
+                    txt.Text = "Comment: " + dr[6].ToString() + " ";
                     pnl.Children.Add(txt);
 
                     Button btn = new Button();
@@ -155,6 +167,7 @@ namespace TavelProjektPT
                     btn.Content = "Ta Bort";
                     btn.Width = 60;
                     btn.Height = 30;
+                    btn.Click += button_Click_1;
                     pnl.Children.Add(btn);
 
                     Listitem.Content = pnl;
@@ -169,15 +182,15 @@ namespace TavelProjektPT
                 MessageBox.Show("Something went wrong with database. " + "Exception: " + ex);
             }
 
-            dr = cm1.ExecuteReader();
-            dr = cm2.ExecuteReader();
-            dr = cm3.ExecuteReader();
-
-            while(dr.Read())
-            {
-
-            }
-            dr.Close();
+         // dr = cm1.ExecuteReader();
+         // dr = cm2.ExecuteReader();
+         // dr = cm3.ExecuteReader();
+         //
+         // while(dr.Read())
+         // {
+         //
+         // }
+         // dr.Close();
         }
 
         private void PictureClick(object sender, RoutedEventArgs e)
